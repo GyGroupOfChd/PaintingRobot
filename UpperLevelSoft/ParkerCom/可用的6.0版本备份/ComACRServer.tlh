@@ -1,0 +1,1701 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (72e4512b).
+//
+// ComACRServer.tlh
+//
+// C++ source equivalent of Win32 type library ..\ComACRServer.tlb
+// compiler-generated file created 10/21/11 at 09:59:02 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("957f976b-d90e-47e8-94fd-6c4a35fe19b5"))
+/* dispinterface */ _IChannelEvents;
+struct /* coclass */ Channel;
+struct __declspec(uuid("6c635423-8824-4852-b833-cace08e8ad10"))
+/* dual interface */ IChannel;
+struct __declspec(uuid("f34d6531-433c-498c-b559-62079c3e9ad3"))
+/* dual interface */ IStatus;
+struct __declspec(uuid("bb432d5c-d0a2-408d-b576-9b388f1ddd48"))
+/* dual interface */ ITerminal;
+struct __declspec(uuid("5ce06ee2-c3a5-4894-889b-04c88c432b2c"))
+/* dual interface */ IContrl;
+struct __declspec(uuid("582d32a7-973f-4e04-8a91-b3d5a5076131"))
+/* dual interface */ IUtility;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_IChannelEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(IChannel, __uuidof(IChannel));
+_COM_SMARTPTR_TYPEDEF(IStatus, __uuidof(IStatus));
+_COM_SMARTPTR_TYPEDEF(ITerminal, __uuidof(ITerminal));
+_COM_SMARTPTR_TYPEDEF(IContrl, __uuidof(IContrl));
+_COM_SMARTPTR_TYPEDEF(IUtility, __uuidof(IUtility));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("957f976b-d90e-47e8-94fd-6c4a35fe19b5"))
+_IChannelEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT StatusWaiting (
+        long msgID,
+        long error );
+    HRESULT WatchdogTimeout ( );
+    HRESULT WatchdogReconnect ( );
+    HRESULT DataWaiting ( );
+    HRESULT AlarmEvent (
+        long iAlarmType,
+        long iAlarmParm,
+        long iAlarmCnt );
+};
+
+struct __declspec(uuid("84c0eecf-da49-4d29-8208-ca04aaf519ca"))
+Channel;
+    // [ default ] interface IChannel
+    // [ default, source ] dispinterface _IChannelEvents
+    // interface IStatus
+    // interface ITerminal
+    // interface IContrl
+    // interface IUtility
+
+struct __declspec(uuid("6c635423-8824-4852-b833-cace08e8ad10"))
+IChannel : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetbstrVersion))
+    _bstr_t bstrVersion;
+    __declspec(property(get=GetnPort,put=PutnPort))
+    long nPort;
+    __declspec(property(get=GetnBPS,put=PutnBPS))
+    long nBPS;
+    __declspec(property(get=GetbstrIP,put=PutbstrIP))
+    _bstr_t bstrIP;
+    __declspec(property(get=GetnBus,put=PutnBus))
+    long nBus;
+    __declspec(property(get=GetisOffline))
+    VARIANT_BOOL isOffline;
+    __declspec(property(get=GetnStatusWaitRate,put=PutnStatusWaitRate))
+    long nStatusWaitRate;
+    __declspec(property(get=GetbOnConnectTest,put=PutbOnConnectTest))
+    VARIANT_BOOL bOnConnectTest;
+    __declspec(property(get=GetnCard))
+    long nCard;
+    __declspec(property(get=GetbstrUSBSerialNumber,put=PutbstrUSBSerialNumber))
+    _bstr_t bstrUSBSerialNumber;
+    __declspec(property(get=GetbTerminalLock,put=PutbTerminalLock))
+    VARIANT_BOOL bTerminalLock;
+    __declspec(property(get=GetnProgramDownloadEcho,put=PutnProgramDownloadEcho))
+    long nProgramDownloadEcho;
+    __declspec(property(get=GetnLastErrorCode))
+    long nLastErrorCode;
+    __declspec(property(get=GetbstrLastError))
+    _bstr_t bstrLastError;
+    __declspec(property(get=GetbOldErrorRets,put=PutbOldErrorRets))
+    VARIANT_BOOL bOldErrorRets;
+    __declspec(property(get=GetnDataWaitRate,put=PutnDataWaitRate))
+    long nDataWaitRate;
+    __declspec(property(get=GetnASCIIBufSize,put=PutnASCIIBufSize))
+    long nASCIIBufSize;
+    __declspec(property(get=GetnPCSPLCBufAvail))
+    long nPCSPLCBufAvail;
+    __declspec(property(get=GetnMinEventDelay,put=PutnMinEventDelay))
+    long nMinEventDelay;
+    __declspec(property(get=GetbTalkingTo))
+    VARIANT_BOOL bTalkingTo;
+    __declspec(property(get=GetPollRate,put=PutPollRate))
+    long PollRate;
+    __declspec(property(get=GetDeltaT))
+    long DeltaT;
+    __declspec(property(get=GetMinPollRate,put=PutMinPollRate))
+    long MinPollRate;
+    __declspec(property(get=GetSendSynchronousEvents,put=PutSendSynchronousEvents))
+    VARIANT_BOOL SendSynchronousEvents;
+    __declspec(property(get=GetSupressStatusDelete,put=PutSupressStatusDelete))
+    long SupressStatusDelete;
+    __declspec(property(get=GetnMoveProfile,put=PutnMoveProfile))
+    long nMoveProfile;
+    __declspec(property(get=GetfMoveVEL,put=PutfMoveVEL))
+    float fMoveVEL;
+    __declspec(property(get=GetfMoveFVEL,put=PutfMoveFVEL))
+    float fMoveFVEL;
+    __declspec(property(get=GetfMoveACC,put=PutfMoveACC))
+    float fMoveACC;
+    __declspec(property(get=GetnMoveMode,put=PutnMoveMode))
+    long nMoveMode;
+    __declspec(property(get=GetbMoveAbsolute,put=PutbMoveAbsolute))
+    VARIANT_BOOL bMoveAbsolute;
+    __declspec(property(get=GetnMoveCounter,put=PutnMoveCounter))
+    long nMoveCounter;
+    __declspec(property(get=GetnArcMode,put=PutnArcMode))
+    long nArcMode;
+    __declspec(property(get=GetbArcAbsolute,put=PutbArcAbsolute))
+    VARIANT_BOOL bArcAbsolute;
+    __declspec(property(get=GetbArcCCW,put=PutbArcCCW))
+    VARIANT_BOOL bArcCCW;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetbstrVersion ( );
+    long GetnPort ( );
+    void PutnPort (
+        long pVal );
+    long GetnBPS ( );
+    void PutnBPS (
+        long pVal );
+    _bstr_t GetbstrIP ( );
+    void PutbstrIP (
+        _bstr_t pVal );
+    long GetnBus ( );
+    void PutnBus (
+        long pVal );
+    VARIANT_BOOL GetisOffline ( );
+    long GetnStatusWaitRate ( );
+    void PutnStatusWaitRate (
+        long pVal );
+    VARIANT_BOOL GetbOnConnectTest ( );
+    void PutbOnConnectTest (
+        VARIANT_BOOL pVal );
+    long GetnCard ( );
+    _bstr_t GetbstrUSBSerialNumber ( );
+    void PutbstrUSBSerialNumber (
+        _bstr_t pVal );
+    VARIANT_BOOL GetbTerminalLock ( );
+    void PutbTerminalLock (
+        VARIANT_BOOL pVal );
+    long GetnProgramDownloadEcho ( );
+    void PutnProgramDownloadEcho (
+        long pVal );
+    long GetnLastErrorCode ( );
+    _bstr_t GetbstrLastError ( );
+    VARIANT_BOOL GetbOldErrorRets ( );
+    void PutbOldErrorRets (
+        VARIANT_BOOL pVal );
+    long GetnDataWaitRate ( );
+    void PutnDataWaitRate (
+        long pVal );
+    long GetnASCIIBufSize ( );
+    void PutnASCIIBufSize (
+        long pVal );
+    long GetnPCSPLCBufAvail ( );
+    void PutnMinEventDelay (
+        long pVal );
+    long GetnMinEventDelay ( );
+    VARIANT_BOOL GetbTalkingTo ( );
+    long GetPollRate ( );
+    void PutPollRate (
+        long pVal );
+    long GetDeltaT ( );
+    long GetMinPollRate ( );
+    void PutMinPollRate (
+        long pVal );
+    VARIANT_BOOL GetSendSynchronousEvents ( );
+    void PutSendSynchronousEvents (
+        VARIANT_BOOL pVal );
+    long GetSupressStatusDelete ( );
+    void PutSupressStatusDelete (
+        long pVal );
+    long GetnMoveProfile ( );
+    void PutnMoveProfile (
+        long pVal );
+    float GetfMoveVEL ( );
+    void PutfMoveVEL (
+        float pVal );
+    float GetfMoveFVEL ( );
+    void PutfMoveFVEL (
+        float pVal );
+    float GetfMoveACC ( );
+    void PutfMoveACC (
+        float pVal );
+    long GetnMoveMode ( );
+    void PutnMoveMode (
+        long pVal );
+    VARIANT_BOOL GetbMoveAbsolute ( );
+    void PutbMoveAbsolute (
+        VARIANT_BOOL pVal );
+    long GetnMoveCounter ( );
+    void PutnMoveCounter (
+        long pVal );
+    long GetnArcMode ( );
+    void PutnArcMode (
+        long pVal );
+    VARIANT_BOOL GetbArcAbsolute ( );
+    void PutbArcAbsolute (
+        VARIANT_BOOL pVal );
+    VARIANT_BOOL GetbArcCCW ( );
+    void PutbArcCCW (
+        VARIANT_BOOL pVal );
+    HRESULT AddAlarmEvent (
+        long iAlarmEvent,
+        long iAlarmParm );
+    HRESULT DeleteAlarmEvent (
+        long iAlarmEvent,
+        long iAlarmParm );
+    HRESULT Disconnect ( );
+    HRESULT Connect (
+        long nTransport,
+        long nIndex );
+    _variant_t GetACRGroup (
+        _bstr_t bstrRequest );
+    _variant_t GetACRCustom (
+        _bstr_t bstrRequest );
+    _variant_t GetACRMemory (
+        long nType,
+        long nAddress,
+        long nCount );
+    long AddACRGroup (
+        _bstr_t bstrRequest );
+    long AddACRCustom (
+        _bstr_t bstrRequest );
+    long AddACRMemory (
+        long nType,
+        long nAddress,
+        long nCount );
+    _variant_t GetStatus (
+        long nMsgid );
+    HRESULT DelStatus (
+        long nMsgid );
+    long GetLocalAddr (
+        long nProg,
+        long nType,
+        long * nSize );
+    long GetLocalArrayAddr (
+        long nProg,
+        long nType,
+        long nArray,
+        long * nSize );
+    VARIANT_BOOL IsFlagSet (
+        long nFlagGrp,
+        long nFlagNdx );
+    VARIANT_BOOL TestConnect ( );
+    VARIANT_BOOL GetParmInfo (
+        long nParameter,
+        long * nType,
+        long * nCode,
+        long * nIndex,
+        BSTR * bstrCatagory,
+        BSTR * bstrDesc );
+    HRESULT SetWatchdog (
+        long nInterval,
+        long nRetries );
+    _variant_t GetACRGroupRaw (
+        long nType,
+        long nCode,
+        long nIndex );
+    long AddACRGroupRaw (
+        long nType,
+        long nCode,
+        long nIndex );
+    long GetParmType (
+        long nParameter );
+    long GetParmAddr (
+        long nParameter );
+    HRESULT GetFastStatusPeriod ( );
+    HRESULT SetFastStatusPeriod (
+        long nValue );
+    HRESULT GetFastStatusEnable ( );
+    HRESULT SetFastStatusEnable (
+        VARIANT_BOOL newVal );
+    HRESULT FastStatusSetup (
+        long nNumofElements,
+        BSTR * * StrArray );
+    long GetSingleAxisLocalArrayAddr (
+        long nProg,
+        long nType,
+        long nArray,
+        long * nSize );
+    _variant_t GetSingleAxisACRMemory (
+        long nType,
+        long nAddress,
+        long nCount );
+    HRESULT InitSmartPLC ( );
+    long ReadSmartPLC (
+        BSTR * pData );
+    HRESULT WriteSmartPLC (
+        long nBytes,
+        BSTR * pbstrData );
+    _bstr_t Read ( );
+    HRESULT Write (
+        _bstr_t send );
+    long TalkTo (
+        long nMode,
+        long nIndex );
+    HRESULT DownloadOS (
+        long nDevice,
+        _bstr_t bstrFile );
+    long GetStatusDL (
+        long * nTotal,
+        long * nBytes );
+    HRESULT StopDownload ( );
+    HRESULT DownloadFile (
+        _bstr_t bstrPrg,
+        _bstr_t bstrFile );
+    HRESULT UploadFile (
+        _bstr_t bstrPrg,
+        _bstr_t bstrFile );
+    long DeviceIoControl (
+        long dwloControlCode,
+        long * saBuffer );
+    long DeviceIoControl2 (
+        long dwloControlCode,
+        long * saBuffer,
+        long * saBuffer2 );
+    HRESULT DownloadEPL (
+        long nDevice,
+        _bstr_t bstrFile );
+    HRESULT DownloadAriesEPLOS (
+        long nDevice,
+        VARIANT_BOOL bAllEPLDrives,
+        long nAxis,
+        _bstr_t bstrFile );
+    long GetStatusDLEx (
+        long * nTotal,
+        long * nBytes,
+        BSTR * bstrExtendedErrorMessage );
+    HRESULT WriteDelay (
+        long nValue );
+    _variant_t FindACR (
+        long nTransport );
+    HRESULT SetFlag (
+        long nBit,
+        VARIANT_BOOL bValue,
+        VARIANT_BOOL bFast );
+    HRESULT SetParmFloat (
+        long nPparm,
+        float fValue,
+        VARIANT_BOOL bFast );
+    HRESULT SetParmLong (
+        long nPparm,
+        long nValue,
+        VARIANT_BOOL bFast );
+    HRESULT SetGlobal (
+        long nCard,
+        long nGlobal,
+        double dValue,
+        VARIANT_BOOL bFast );
+    HRESULT Move (
+        long nMask,
+        const _variant_t & targets );
+    HRESULT Arc (
+        long nMask,
+        const _variant_t & targets );
+    HRESULT Stop (
+        VARIANT_BOOL bDecel );
+    HRESULT SendRES (
+        long nMask );
+    HRESULT GetMoveCounter (
+        long * nCounter,
+        long * nIncrement );
+    HRESULT SetMoveCounter (
+        long nCounter,
+        long nIncrement );
+    HRESULT SetACRMemory (
+        long nType,
+        long nAddress,
+        const _variant_t & values );
+    HRESULT SetACRMemoryMask (
+        long nAddress,
+        long nNAND,
+        long nOR );
+    HRESULT SetParmLongMask (
+        long nPparm,
+        long nNAND,
+        long nOR );
+    HRESULT SetFOV (
+        long nMask,
+        float fValue );
+    HRESULT SetROV (
+        long nMask,
+        float fValue );
+    HRESULT InitPerformance ( );
+    _variant_t GetPerformance ( );
+    HRESULT MoveBatch (
+        long nType,
+        const _variant_t & moves );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_bstrVersion (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_nPort (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nPort (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_nBPS (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nBPS (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_bstrIP (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_bstrIP (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_nBus (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nBus (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_isOffline (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_nStatusWaitRate (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nStatusWaitRate (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_bOnConnectTest (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_bOnConnectTest (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_nCard (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_bstrUSBSerialNumber (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_bstrUSBSerialNumber (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_bTerminalLock (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_bTerminalLock (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_nProgramDownloadEcho (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nProgramDownloadEcho (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_nLastErrorCode (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_bstrLastError (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_bOldErrorRets (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_bOldErrorRets (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_nDataWaitRate (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nDataWaitRate (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_nASCIIBufSize (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nASCIIBufSize (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_nPCSPLCBufAvail (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nMinEventDelay (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_nMinEventDelay (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_bTalkingTo (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_PollRate (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_PollRate (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_DeltaT (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_MinPollRate (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_MinPollRate (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_SendSynchronousEvents (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_SendSynchronousEvents (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_SupressStatusDelete (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_SupressStatusDelete (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_nMoveProfile (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nMoveProfile (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_fMoveVEL (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_fMoveVEL (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_fMoveFVEL (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_fMoveFVEL (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_fMoveACC (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_fMoveACC (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_nMoveMode (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nMoveMode (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_bMoveAbsolute (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_bMoveAbsolute (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_nMoveCounter (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nMoveCounter (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_nArcMode (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nArcMode (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_bArcAbsolute (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_bArcAbsolute (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_bArcCCW (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_bArcCCW (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall raw_AddAlarmEvent (
+        long iAlarmEvent,
+        long iAlarmParm ) = 0;
+    virtual HRESULT __stdcall raw_DeleteAlarmEvent (
+        long iAlarmEvent,
+        long iAlarmParm ) = 0;
+    virtual HRESULT __stdcall raw_Disconnect ( ) = 0;
+    virtual HRESULT __stdcall raw_Connect (
+        long nTransport,
+        long nIndex ) = 0;
+    virtual HRESULT __stdcall raw_GetACRGroup (
+        BSTR bstrRequest,
+        VARIANT * status ) = 0;
+    virtual HRESULT __stdcall raw_GetACRCustom (
+        BSTR bstrRequest,
+        VARIANT * status ) = 0;
+    virtual HRESULT __stdcall raw_GetACRMemory (
+        long nType,
+        long nAddress,
+        long nCount,
+        VARIANT * status ) = 0;
+    virtual HRESULT __stdcall raw_AddACRGroup (
+        BSTR bstrRequest,
+        long * nMsgid ) = 0;
+    virtual HRESULT __stdcall raw_AddACRCustom (
+        BSTR bstrRequest,
+        long * nMsgid ) = 0;
+    virtual HRESULT __stdcall raw_AddACRMemory (
+        long nType,
+        long nAddress,
+        long nCount,
+        long * nMsgid ) = 0;
+    virtual HRESULT __stdcall raw_GetStatus (
+        long nMsgid,
+        VARIANT * status ) = 0;
+    virtual HRESULT __stdcall raw_DelStatus (
+        long nMsgid ) = 0;
+    virtual HRESULT __stdcall raw_GetLocalAddr (
+        long nProg,
+        long nType,
+        long * nSize,
+        long * nAddr ) = 0;
+    virtual HRESULT __stdcall raw_GetLocalArrayAddr (
+        long nProg,
+        long nType,
+        long nArray,
+        long * nSize,
+        long * nAddr ) = 0;
+    virtual HRESULT __stdcall raw_IsFlagSet (
+        long nFlagGrp,
+        long nFlagNdx,
+        VARIANT_BOOL * bFlagSet ) = 0;
+    virtual HRESULT __stdcall raw_TestConnect (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall raw_GetParmInfo (
+        long nParameter,
+        long * nType,
+        long * nCode,
+        long * nIndex,
+        BSTR * bstrCatagory,
+        BSTR * bstrDesc,
+        VARIANT_BOOL * bFound ) = 0;
+    virtual HRESULT __stdcall raw_SetWatchdog (
+        long nInterval,
+        long nRetries ) = 0;
+    virtual HRESULT __stdcall raw_GetACRGroupRaw (
+        long nType,
+        long nCode,
+        long nIndex,
+        VARIANT * status ) = 0;
+    virtual HRESULT __stdcall raw_AddACRGroupRaw (
+        long nType,
+        long nCode,
+        long nIndex,
+        long * nMsgid ) = 0;
+    virtual HRESULT __stdcall raw_GetParmType (
+        long nParameter,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall raw_GetParmAddr (
+        long nParameter,
+        long * nAddr ) = 0;
+    virtual HRESULT __stdcall raw_GetFastStatusPeriod ( ) = 0;
+    virtual HRESULT __stdcall raw_SetFastStatusPeriod (
+        long nValue ) = 0;
+    virtual HRESULT __stdcall raw_GetFastStatusEnable ( ) = 0;
+    virtual HRESULT __stdcall raw_SetFastStatusEnable (
+        VARIANT_BOOL newVal ) = 0;
+    virtual HRESULT __stdcall raw_FastStatusSetup (
+        long nNumofElements,
+        BSTR * * StrArray ) = 0;
+    virtual HRESULT __stdcall raw_GetSingleAxisLocalArrayAddr (
+        long nProg,
+        long nType,
+        long nArray,
+        long * nSize,
+        long * nAddr ) = 0;
+    virtual HRESULT __stdcall raw_GetSingleAxisACRMemory (
+        long nType,
+        long nAddress,
+        long nCount,
+        VARIANT * status ) = 0;
+    virtual HRESULT __stdcall raw_InitSmartPLC ( ) = 0;
+    virtual HRESULT __stdcall raw_ReadSmartPLC (
+        BSTR * pData,
+        long * pBytes ) = 0;
+    virtual HRESULT __stdcall raw_WriteSmartPLC (
+        long nBytes,
+        BSTR * pbstrData ) = 0;
+    virtual HRESULT __stdcall raw_Read (
+        BSTR * recv ) = 0;
+    virtual HRESULT __stdcall raw_Write (
+        BSTR send ) = 0;
+    virtual HRESULT __stdcall raw_TalkTo (
+        long nMode,
+        long nIndex,
+        long * nStatus ) = 0;
+    virtual HRESULT __stdcall raw_DownloadOS (
+        long nDevice,
+        BSTR bstrFile ) = 0;
+    virtual HRESULT __stdcall raw_GetStatusDL (
+        long * nTotal,
+        long * nBytes,
+        long * nStatus ) = 0;
+    virtual HRESULT __stdcall raw_StopDownload ( ) = 0;
+    virtual HRESULT __stdcall raw_DownloadFile (
+        BSTR bstrPrg,
+        BSTR bstrFile ) = 0;
+    virtual HRESULT __stdcall raw_UploadFile (
+        BSTR bstrPrg,
+        BSTR bstrFile ) = 0;
+    virtual HRESULT __stdcall raw_DeviceIoControl (
+        long dwloControlCode,
+        long * saBuffer,
+        long * rtn ) = 0;
+    virtual HRESULT __stdcall raw_DeviceIoControl2 (
+        long dwloControlCode,
+        long * saBuffer,
+        long * saBuffer2,
+        long * rtn ) = 0;
+    virtual HRESULT __stdcall raw_DownloadEPL (
+        long nDevice,
+        BSTR bstrFile ) = 0;
+    virtual HRESULT __stdcall raw_DownloadAriesEPLOS (
+        long nDevice,
+        VARIANT_BOOL bAllEPLDrives,
+        long nAxis,
+        BSTR bstrFile ) = 0;
+    virtual HRESULT __stdcall raw_GetStatusDLEx (
+        long * nTotal,
+        long * nBytes,
+        BSTR * bstrExtendedErrorMessage,
+        long * nStatus ) = 0;
+    virtual HRESULT __stdcall raw_WriteDelay (
+        long nValue ) = 0;
+    virtual HRESULT __stdcall raw_FindACR (
+        long nTransport,
+        VARIANT * nDevices ) = 0;
+    virtual HRESULT __stdcall raw_SetFlag (
+        long nBit,
+        VARIANT_BOOL bValue,
+        VARIANT_BOOL bFast ) = 0;
+    virtual HRESULT __stdcall raw_SetParmFloat (
+        long nPparm,
+        float fValue,
+        VARIANT_BOOL bFast ) = 0;
+    virtual HRESULT __stdcall raw_SetParmLong (
+        long nPparm,
+        long nValue,
+        VARIANT_BOOL bFast ) = 0;
+    virtual HRESULT __stdcall raw_SetGlobal (
+        long nCard,
+        long nGlobal,
+        double dValue,
+        VARIANT_BOOL bFast ) = 0;
+    virtual HRESULT __stdcall raw_Move (
+        long nMask,
+        VARIANT targets ) = 0;
+    virtual HRESULT __stdcall raw_Arc (
+        long nMask,
+        VARIANT targets ) = 0;
+    virtual HRESULT __stdcall raw_Stop (
+        VARIANT_BOOL bDecel ) = 0;
+    virtual HRESULT __stdcall raw_SendRES (
+        long nMask ) = 0;
+    virtual HRESULT __stdcall raw_GetMoveCounter (
+        long * nCounter,
+        long * nIncrement ) = 0;
+    virtual HRESULT __stdcall raw_SetMoveCounter (
+        long nCounter,
+        long nIncrement ) = 0;
+    virtual HRESULT __stdcall raw_SetACRMemory (
+        long nType,
+        long nAddress,
+        VARIANT values ) = 0;
+    virtual HRESULT __stdcall raw_SetACRMemoryMask (
+        long nAddress,
+        long nNAND,
+        long nOR ) = 0;
+    virtual HRESULT __stdcall raw_SetParmLongMask (
+        long nPparm,
+        long nNAND,
+        long nOR ) = 0;
+    virtual HRESULT __stdcall raw_SetFOV (
+        long nMask,
+        float fValue ) = 0;
+    virtual HRESULT __stdcall raw_SetROV (
+        long nMask,
+        float fValue ) = 0;
+    virtual HRESULT __stdcall raw_InitPerformance ( ) = 0;
+    virtual HRESULT __stdcall raw_GetPerformance (
+        VARIANT * data ) = 0;
+    virtual HRESULT __stdcall raw_MoveBatch (
+        long nType,
+        VARIANT moves ) = 0;
+};
+
+struct __declspec(uuid("f34d6531-433c-498c-b559-62079c3e9ad3"))
+IStatus : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetMinPollRate,put=PutMinPollRate))
+    long MinPollRate;
+    __declspec(property(get=GetbstrVersion))
+    _bstr_t bstrVersion;
+    __declspec(property(get=GetnPort,put=PutnPort))
+    long nPort;
+    __declspec(property(get=GetnBPS,put=PutnBPS))
+    long nBPS;
+    __declspec(property(get=GetbstrIP,put=PutbstrIP))
+    _bstr_t bstrIP;
+    __declspec(property(get=GetnBus,put=PutnBus))
+    long nBus;
+    __declspec(property(get=GetisOffline))
+    VARIANT_BOOL isOffline;
+    __declspec(property(get=GetnStatusWaitRate,put=PutnStatusWaitRate))
+    long nStatusWaitRate;
+    __declspec(property(get=GetbOnConnectTest,put=PutbOnConnectTest))
+    VARIANT_BOOL bOnConnectTest;
+    __declspec(property(get=GetnCard))
+    long nCard;
+    __declspec(property(get=GetbstrUSBSerialNumber,put=PutbstrUSBSerialNumber))
+    _bstr_t bstrUSBSerialNumber;
+    __declspec(property(get=GetPollRate,put=PutPollRate))
+    long PollRate;
+    __declspec(property(get=GetDeltaT))
+    long DeltaT;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetbstrVersion ( );
+    long GetnPort ( );
+    void PutnPort (
+        long pVal );
+    long GetnBPS ( );
+    void PutnBPS (
+        long pVal );
+    _bstr_t GetbstrIP ( );
+    void PutbstrIP (
+        _bstr_t pVal );
+    long GetnBus ( );
+    void PutnBus (
+        long pVal );
+    VARIANT_BOOL GetisOffline ( );
+    long GetnStatusWaitRate ( );
+    void PutnStatusWaitRate (
+        long pVal );
+    VARIANT_BOOL GetbOnConnectTest ( );
+    void PutbOnConnectTest (
+        VARIANT_BOOL pVal );
+    long GetnCard ( );
+    _bstr_t GetbstrUSBSerialNumber ( );
+    void PutbstrUSBSerialNumber (
+        _bstr_t pVal );
+    HRESULT Disconnect ( );
+    HRESULT Connect (
+        long nTransport,
+        long nIndex );
+    _variant_t GetACRGroup (
+        _bstr_t bstrRequest );
+    _variant_t GetACRCustom (
+        _bstr_t bstrRequest );
+    _variant_t GetACRMemory (
+        long nType,
+        long nAddress,
+        long nCount );
+    long AddACRGroup (
+        _bstr_t bstrRequest );
+    long AddACRCustom (
+        _bstr_t bstrRequest );
+    long AddACRMemory (
+        long nType,
+        long nAddress,
+        long nCount );
+    _variant_t GetStatus (
+        long nMsgid );
+    HRESULT DelStatus (
+        long nMsgid );
+    long GetLocalAddr (
+        long nProg,
+        long nType,
+        long * nSize );
+    long GetLocalArrayAddr (
+        long nProg,
+        long nType,
+        long nArray,
+        long * nSize );
+    VARIANT_BOOL IsFlagSet (
+        long nFlagGrp,
+        long nFlagNdx );
+    VARIANT_BOOL TestConnect ( );
+    VARIANT_BOOL GetParmInfo (
+        long nParameter,
+        long * nType,
+        long * nCode,
+        long * nIndex,
+        BSTR * bstrCatagory,
+        BSTR * bstrDesc );
+    HRESULT SetWatchdog (
+        long nInterval,
+        long nRetries );
+    _variant_t GetACRGroupRaw (
+        long nType,
+        long nCode,
+        long nIndex );
+    long AddACRGroupRaw (
+        long nType,
+        long nCode,
+        long nIndex );
+    long GetParmType (
+        long nParameter );
+    long GetParmAddr (
+        long nParameter );
+    HRESULT GetFastStatusPeriod ( );
+    HRESULT SetFastStatusPeriod (
+        long nValue );
+    HRESULT GetFastStatusEnable ( );
+    HRESULT SetFastStatusEnable (
+        VARIANT_BOOL newVal );
+    HRESULT FastStatusSetup (
+        long nNumofElements,
+        BSTR * * StrArray );
+    long GetSingleAxisLocalArrayAddr (
+        long nProg,
+        long nType,
+        long nArray,
+        long * nSize );
+    long GetPollRate ( );
+    void PutPollRate (
+        long pVal );
+    long GetDeltaT ( );
+    _variant_t GetSingleAxisACRMemory (
+        long nType,
+        long nAddress,
+        long nCount );
+    long GetMinPollRate ( );
+    void PutMinPollRate (
+        long pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_bstrVersion (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_nPort (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nPort (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_nBPS (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nBPS (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_bstrIP (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_bstrIP (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_nBus (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nBus (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_isOffline (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_nStatusWaitRate (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nStatusWaitRate (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_bOnConnectTest (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_bOnConnectTest (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_nCard (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_bstrUSBSerialNumber (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_bstrUSBSerialNumber (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall raw_Disconnect ( ) = 0;
+    virtual HRESULT __stdcall raw_Connect (
+        long nTransport,
+        long nIndex ) = 0;
+    virtual HRESULT __stdcall raw_GetACRGroup (
+        BSTR bstrRequest,
+        VARIANT * status ) = 0;
+    virtual HRESULT __stdcall raw_GetACRCustom (
+        BSTR bstrRequest,
+        VARIANT * status ) = 0;
+    virtual HRESULT __stdcall raw_GetACRMemory (
+        long nType,
+        long nAddress,
+        long nCount,
+        VARIANT * status ) = 0;
+    virtual HRESULT __stdcall raw_AddACRGroup (
+        BSTR bstrRequest,
+        long * nMsgid ) = 0;
+    virtual HRESULT __stdcall raw_AddACRCustom (
+        BSTR bstrRequest,
+        long * nMsgid ) = 0;
+    virtual HRESULT __stdcall raw_AddACRMemory (
+        long nType,
+        long nAddress,
+        long nCount,
+        long * nMsgid ) = 0;
+    virtual HRESULT __stdcall raw_GetStatus (
+        long nMsgid,
+        VARIANT * status ) = 0;
+    virtual HRESULT __stdcall raw_DelStatus (
+        long nMsgid ) = 0;
+    virtual HRESULT __stdcall raw_GetLocalAddr (
+        long nProg,
+        long nType,
+        long * nSize,
+        long * nAddr ) = 0;
+    virtual HRESULT __stdcall raw_GetLocalArrayAddr (
+        long nProg,
+        long nType,
+        long nArray,
+        long * nSize,
+        long * nAddr ) = 0;
+    virtual HRESULT __stdcall raw_IsFlagSet (
+        long nFlagGrp,
+        long nFlagNdx,
+        VARIANT_BOOL * bFlagSet ) = 0;
+    virtual HRESULT __stdcall raw_TestConnect (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall raw_GetParmInfo (
+        long nParameter,
+        long * nType,
+        long * nCode,
+        long * nIndex,
+        BSTR * bstrCatagory,
+        BSTR * bstrDesc,
+        VARIANT_BOOL * bFound ) = 0;
+    virtual HRESULT __stdcall raw_SetWatchdog (
+        long nInterval,
+        long nRetries ) = 0;
+    virtual HRESULT __stdcall raw_GetACRGroupRaw (
+        long nType,
+        long nCode,
+        long nIndex,
+        VARIANT * status ) = 0;
+    virtual HRESULT __stdcall raw_AddACRGroupRaw (
+        long nType,
+        long nCode,
+        long nIndex,
+        long * nMsgid ) = 0;
+    virtual HRESULT __stdcall raw_GetParmType (
+        long nParameter,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall raw_GetParmAddr (
+        long nParameter,
+        long * nAddr ) = 0;
+    virtual HRESULT __stdcall raw_GetFastStatusPeriod ( ) = 0;
+    virtual HRESULT __stdcall raw_SetFastStatusPeriod (
+        long nValue ) = 0;
+    virtual HRESULT __stdcall raw_GetFastStatusEnable ( ) = 0;
+    virtual HRESULT __stdcall raw_SetFastStatusEnable (
+        VARIANT_BOOL newVal ) = 0;
+    virtual HRESULT __stdcall raw_FastStatusSetup (
+        long nNumofElements,
+        BSTR * * StrArray ) = 0;
+    virtual HRESULT __stdcall raw_GetSingleAxisLocalArrayAddr (
+        long nProg,
+        long nType,
+        long nArray,
+        long * nSize,
+        long * nAddr ) = 0;
+    virtual HRESULT __stdcall get_PollRate (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_PollRate (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_DeltaT (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall raw_GetSingleAxisACRMemory (
+        long nType,
+        long nAddress,
+        long nCount,
+        VARIANT * status ) = 0;
+    virtual HRESULT __stdcall get_MinPollRate (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_MinPollRate (
+        long pVal ) = 0;
+};
+
+struct __declspec(uuid("bb432d5c-d0a2-408d-b576-9b388f1ddd48"))
+ITerminal : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetbstrVersion))
+    _bstr_t bstrVersion;
+    __declspec(property(get=GetnPort,put=PutnPort))
+    long nPort;
+    __declspec(property(get=GetnBPS,put=PutnBPS))
+    long nBPS;
+    __declspec(property(get=GetbstrIP,put=PutbstrIP))
+    _bstr_t bstrIP;
+    __declspec(property(get=GetnBus,put=PutnBus))
+    long nBus;
+    __declspec(property(get=GetisOffline))
+    VARIANT_BOOL isOffline;
+    __declspec(property(get=GetbOnConnectTest,put=PutbOnConnectTest))
+    VARIANT_BOOL bOnConnectTest;
+    __declspec(property(get=GetnCard))
+    long nCard;
+    __declspec(property(get=GetbstrUSBSerialNumber,put=PutbstrUSBSerialNumber))
+    _bstr_t bstrUSBSerialNumber;
+    __declspec(property(get=GetnDataWaitRate,put=PutnDataWaitRate))
+    long nDataWaitRate;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetbstrVersion ( );
+    long GetnPort ( );
+    void PutnPort (
+        long pVal );
+    long GetnBPS ( );
+    void PutnBPS (
+        long pVal );
+    _bstr_t GetbstrIP ( );
+    void PutbstrIP (
+        _bstr_t pVal );
+    long GetnBus ( );
+    void PutnBus (
+        long pVal );
+    VARIANT_BOOL GetisOffline ( );
+    VARIANT_BOOL GetbOnConnectTest ( );
+    void PutbOnConnectTest (
+        VARIANT_BOOL pVal );
+    long GetnCard ( );
+    _bstr_t GetbstrUSBSerialNumber ( );
+    void PutbstrUSBSerialNumber (
+        _bstr_t pVal );
+    long GetnDataWaitRate ( );
+    void PutnDataWaitRate (
+        long pVal );
+    HRESULT Disconnect ( );
+    HRESULT Connect (
+        long nTransport,
+        long nIndex );
+    VARIANT_BOOL TestConnect ( );
+    HRESULT SetWatchdog (
+        long nInterval,
+        long nRetries );
+    _bstr_t Read ( );
+    HRESULT Write (
+        _bstr_t send );
+    long TalkTo (
+        long nMode,
+        long nIndex );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_bstrVersion (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_nPort (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nPort (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_nBPS (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nBPS (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_bstrIP (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_bstrIP (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_nBus (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nBus (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_isOffline (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_bOnConnectTest (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_bOnConnectTest (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_nCard (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_bstrUSBSerialNumber (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_bstrUSBSerialNumber (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_nDataWaitRate (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nDataWaitRate (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall raw_Disconnect ( ) = 0;
+    virtual HRESULT __stdcall raw_Connect (
+        long nTransport,
+        long nIndex ) = 0;
+    virtual HRESULT __stdcall raw_TestConnect (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall raw_SetWatchdog (
+        long nInterval,
+        long nRetries ) = 0;
+    virtual HRESULT __stdcall raw_Read (
+        BSTR * recv ) = 0;
+    virtual HRESULT __stdcall raw_Write (
+        BSTR send ) = 0;
+    virtual HRESULT __stdcall raw_TalkTo (
+        long nMode,
+        long nIndex,
+        long * nStatus ) = 0;
+};
+
+struct __declspec(uuid("5ce06ee2-c3a5-4894-889b-04c88c432b2c"))
+IContrl : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetbArcCCW,put=PutbArcCCW))
+    VARIANT_BOOL bArcCCW;
+    __declspec(property(get=GetbstrVersion))
+    _bstr_t bstrVersion;
+    __declspec(property(get=GetnPort,put=PutnPort))
+    long nPort;
+    __declspec(property(get=GetnBPS,put=PutnBPS))
+    long nBPS;
+    __declspec(property(get=GetbstrIP,put=PutbstrIP))
+    _bstr_t bstrIP;
+    __declspec(property(get=GetnBus,put=PutnBus))
+    long nBus;
+    __declspec(property(get=GetisOffline))
+    VARIANT_BOOL isOffline;
+    __declspec(property(get=GetbOnConnectTest,put=PutbOnConnectTest))
+    VARIANT_BOOL bOnConnectTest;
+    __declspec(property(get=GetnMoveProfile,put=PutnMoveProfile))
+    long nMoveProfile;
+    __declspec(property(get=GetfMoveVEL,put=PutfMoveVEL))
+    float fMoveVEL;
+    __declspec(property(get=GetfMoveFVEL,put=PutfMoveFVEL))
+    float fMoveFVEL;
+    __declspec(property(get=GetfMoveACC,put=PutfMoveACC))
+    float fMoveACC;
+    __declspec(property(get=GetnMoveMode,put=PutnMoveMode))
+    long nMoveMode;
+    __declspec(property(get=GetbMoveAbsolute,put=PutbMoveAbsolute))
+    VARIANT_BOOL bMoveAbsolute;
+    __declspec(property(get=GetnMoveCounter,put=PutnMoveCounter))
+    long nMoveCounter;
+    __declspec(property(get=GetnArcMode,put=PutnArcMode))
+    long nArcMode;
+    __declspec(property(get=GetbArcAbsolute,put=PutbArcAbsolute))
+    VARIANT_BOOL bArcAbsolute;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetbstrVersion ( );
+    long GetnPort ( );
+    void PutnPort (
+        long pVal );
+    long GetnBPS ( );
+    void PutnBPS (
+        long pVal );
+    _bstr_t GetbstrIP ( );
+    void PutbstrIP (
+        _bstr_t pVal );
+    long GetnBus ( );
+    void PutnBus (
+        long pVal );
+    VARIANT_BOOL GetisOffline ( );
+    VARIANT_BOOL GetbOnConnectTest ( );
+    void PutbOnConnectTest (
+        VARIANT_BOOL pVal );
+    long GetnMoveProfile ( );
+    void PutnMoveProfile (
+        long pVal );
+    float GetfMoveVEL ( );
+    void PutfMoveVEL (
+        float pVal );
+    float GetfMoveFVEL ( );
+    void PutfMoveFVEL (
+        float pVal );
+    float GetfMoveACC ( );
+    void PutfMoveACC (
+        float pVal );
+    long GetnMoveMode ( );
+    void PutnMoveMode (
+        long pVal );
+    VARIANT_BOOL GetbMoveAbsolute ( );
+    void PutbMoveAbsolute (
+        VARIANT_BOOL pVal );
+    long GetnMoveCounter ( );
+    void PutnMoveCounter (
+        long pVal );
+    long GetnArcMode ( );
+    void PutnArcMode (
+        long pVal );
+    VARIANT_BOOL GetbArcAbsolute ( );
+    void PutbArcAbsolute (
+        VARIANT_BOOL pVal );
+    VARIANT_BOOL GetbArcCCW ( );
+    void PutbArcCCW (
+        VARIANT_BOOL pVal );
+    HRESULT Disconnect ( );
+    HRESULT Connect (
+        long nTransport,
+        long nIndex );
+    HRESULT SetFlag (
+        long nBit,
+        VARIANT_BOOL bValue,
+        VARIANT_BOOL bFast );
+    HRESULT SetParmFloat (
+        long nPparm,
+        float fValue,
+        VARIANT_BOOL bFast );
+    HRESULT SetParmLong (
+        long nPparm,
+        long nValue,
+        VARIANT_BOOL bFast );
+    HRESULT SetGlobal (
+        long nCard,
+        long nGlobal,
+        double dValue,
+        VARIANT_BOOL bFast );
+    HRESULT Move (
+        long nMask,
+        const _variant_t & targets );
+    HRESULT Arc (
+        long nMask,
+        const _variant_t & targets );
+    HRESULT Stop (
+        VARIANT_BOOL bDecel );
+    HRESULT SendRES (
+        long nMask );
+    VARIANT_BOOL TestConnect ( );
+    HRESULT SetWatchdog (
+        long nInterval,
+        long nRetries );
+    HRESULT GetMoveCounter (
+        long * nCounter,
+        long * nIncrement );
+    HRESULT SetMoveCounter (
+        long nCounter,
+        long nIncrement );
+    HRESULT SetACRMemory (
+        long nType,
+        long nAddress,
+        const _variant_t & values );
+    HRESULT SetACRMemoryMask (
+        long nAddress,
+        long nNAND,
+        long nOR );
+    HRESULT SetParmLongMask (
+        long nPparm,
+        long nNAND,
+        long nOR );
+    HRESULT SetFOV (
+        long nMask,
+        float fValue );
+    HRESULT SetROV (
+        long nMask,
+        float fValue );
+    HRESULT InitPerformance ( );
+    _variant_t GetPerformance ( );
+    HRESULT MoveBatch (
+        long nType,
+        const _variant_t & moves );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_bstrVersion (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_nPort (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nPort (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_nBPS (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nBPS (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_bstrIP (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_bstrIP (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_nBus (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nBus (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_isOffline (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_bOnConnectTest (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_bOnConnectTest (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_nMoveProfile (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nMoveProfile (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_fMoveVEL (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_fMoveVEL (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_fMoveFVEL (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_fMoveFVEL (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_fMoveACC (
+        float * pVal ) = 0;
+    virtual HRESULT __stdcall put_fMoveACC (
+        float pVal ) = 0;
+    virtual HRESULT __stdcall get_nMoveMode (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nMoveMode (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_bMoveAbsolute (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_bMoveAbsolute (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_nMoveCounter (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nMoveCounter (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_nArcMode (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nArcMode (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_bArcAbsolute (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_bArcAbsolute (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_bArcCCW (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_bArcCCW (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall raw_Disconnect ( ) = 0;
+    virtual HRESULT __stdcall raw_Connect (
+        long nTransport,
+        long nIndex ) = 0;
+    virtual HRESULT __stdcall raw_SetFlag (
+        long nBit,
+        VARIANT_BOOL bValue,
+        VARIANT_BOOL bFast ) = 0;
+    virtual HRESULT __stdcall raw_SetParmFloat (
+        long nPparm,
+        float fValue,
+        VARIANT_BOOL bFast ) = 0;
+    virtual HRESULT __stdcall raw_SetParmLong (
+        long nPparm,
+        long nValue,
+        VARIANT_BOOL bFast ) = 0;
+    virtual HRESULT __stdcall raw_SetGlobal (
+        long nCard,
+        long nGlobal,
+        double dValue,
+        VARIANT_BOOL bFast ) = 0;
+    virtual HRESULT __stdcall raw_Move (
+        long nMask,
+        VARIANT targets ) = 0;
+    virtual HRESULT __stdcall raw_Arc (
+        long nMask,
+        VARIANT targets ) = 0;
+    virtual HRESULT __stdcall raw_Stop (
+        VARIANT_BOOL bDecel ) = 0;
+    virtual HRESULT __stdcall raw_SendRES (
+        long nMask ) = 0;
+    virtual HRESULT __stdcall raw_TestConnect (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall raw_SetWatchdog (
+        long nInterval,
+        long nRetries ) = 0;
+    virtual HRESULT __stdcall raw_GetMoveCounter (
+        long * nCounter,
+        long * nIncrement ) = 0;
+    virtual HRESULT __stdcall raw_SetMoveCounter (
+        long nCounter,
+        long nIncrement ) = 0;
+    virtual HRESULT __stdcall raw_SetACRMemory (
+        long nType,
+        long nAddress,
+        VARIANT values ) = 0;
+    virtual HRESULT __stdcall raw_SetACRMemoryMask (
+        long nAddress,
+        long nNAND,
+        long nOR ) = 0;
+    virtual HRESULT __stdcall raw_SetParmLongMask (
+        long nPparm,
+        long nNAND,
+        long nOR ) = 0;
+    virtual HRESULT __stdcall raw_SetFOV (
+        long nMask,
+        float fValue ) = 0;
+    virtual HRESULT __stdcall raw_SetROV (
+        long nMask,
+        float fValue ) = 0;
+    virtual HRESULT __stdcall raw_InitPerformance ( ) = 0;
+    virtual HRESULT __stdcall raw_GetPerformance (
+        VARIANT * data ) = 0;
+    virtual HRESULT __stdcall raw_MoveBatch (
+        long nType,
+        VARIANT moves ) = 0;
+};
+
+struct __declspec(uuid("582d32a7-973f-4e04-8a91-b3d5a5076131"))
+IUtility : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetbstrVersion))
+    _bstr_t bstrVersion;
+    __declspec(property(get=GetnPort,put=PutnPort))
+    long nPort;
+    __declspec(property(get=GetnBPS,put=PutnBPS))
+    long nBPS;
+    __declspec(property(get=GetbstrIP,put=PutbstrIP))
+    _bstr_t bstrIP;
+    __declspec(property(get=GetnBus,put=PutnBus))
+    long nBus;
+    __declspec(property(get=GetisOffline))
+    VARIANT_BOOL isOffline;
+    __declspec(property(get=GetbOnConnectTest,put=PutbOnConnectTest))
+    VARIANT_BOOL bOnConnectTest;
+    __declspec(property(get=GetnCard))
+    long nCard;
+    __declspec(property(get=GetbstrUSBSerialNumber,put=PutbstrUSBSerialNumber))
+    _bstr_t bstrUSBSerialNumber;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetbstrVersion ( );
+    long GetnPort ( );
+    void PutnPort (
+        long pVal );
+    long GetnBPS ( );
+    void PutnBPS (
+        long pVal );
+    _bstr_t GetbstrIP ( );
+    void PutbstrIP (
+        _bstr_t pVal );
+    long GetnBus ( );
+    void PutnBus (
+        long pVal );
+    VARIANT_BOOL GetisOffline ( );
+    VARIANT_BOOL GetbOnConnectTest ( );
+    void PutbOnConnectTest (
+        VARIANT_BOOL pVal );
+    long GetnCard ( );
+    _bstr_t GetbstrUSBSerialNumber ( );
+    void PutbstrUSBSerialNumber (
+        _bstr_t pVal );
+    HRESULT Disconnect ( );
+    HRESULT Connect (
+        long nTransport,
+        long nIndex );
+    VARIANT_BOOL TestConnect ( );
+    HRESULT SetWatchdog (
+        long nInterval,
+        long nRetries );
+    HRESULT DownloadOS (
+        long nDevice,
+        _bstr_t bstrFile );
+    long GetStatusDL (
+        long * nTotal,
+        long * nBytes );
+    HRESULT StopDownload ( );
+    HRESULT DownloadFile (
+        _bstr_t bstrPrg,
+        _bstr_t bstrFile );
+    HRESULT UploadFile (
+        _bstr_t bstrPrg,
+        _bstr_t bstrFile );
+    long DeviceIoControl (
+        long dwloControlCode,
+        long * saBuffer );
+    long DeviceIoControl2 (
+        long dwloControlCode,
+        long * saBuffer,
+        long * saBuffer2 );
+    HRESULT DownloadEPL (
+        long nDevice,
+        _bstr_t bstrFile );
+    HRESULT DownloadAriesEPLOS (
+        long nDevice,
+        VARIANT_BOOL bAllEPLDrives,
+        long nAxis,
+        _bstr_t bstrFile );
+    long GetStatusDLEx (
+        long * nTotal,
+        long * nBytes,
+        BSTR * bstrExtendedErrorMessage );
+    HRESULT WriteDelay (
+        long nValue );
+    _variant_t FindACR (
+        long nTransport );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_bstrVersion (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_nPort (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nPort (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_nBPS (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nBPS (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_bstrIP (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_bstrIP (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_nBus (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_nBus (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_isOffline (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall get_bOnConnectTest (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_bOnConnectTest (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_nCard (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_bstrUSBSerialNumber (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_bstrUSBSerialNumber (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall raw_Disconnect ( ) = 0;
+    virtual HRESULT __stdcall raw_Connect (
+        long nTransport,
+        long nIndex ) = 0;
+    virtual HRESULT __stdcall raw_TestConnect (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall raw_SetWatchdog (
+        long nInterval,
+        long nRetries ) = 0;
+    virtual HRESULT __stdcall raw_DownloadOS (
+        long nDevice,
+        BSTR bstrFile ) = 0;
+    virtual HRESULT __stdcall raw_GetStatusDL (
+        long * nTotal,
+        long * nBytes,
+        long * nStatus ) = 0;
+    virtual HRESULT __stdcall raw_StopDownload ( ) = 0;
+    virtual HRESULT __stdcall raw_DownloadFile (
+        BSTR bstrPrg,
+        BSTR bstrFile ) = 0;
+    virtual HRESULT __stdcall raw_UploadFile (
+        BSTR bstrPrg,
+        BSTR bstrFile ) = 0;
+    virtual HRESULT __stdcall raw_DeviceIoControl (
+        long dwloControlCode,
+        long * saBuffer,
+        long * rtn ) = 0;
+    virtual HRESULT __stdcall raw_DeviceIoControl2 (
+        long dwloControlCode,
+        long * saBuffer,
+        long * saBuffer2,
+        long * rtn ) = 0;
+    virtual HRESULT __stdcall raw_DownloadEPL (
+        long nDevice,
+        BSTR bstrFile ) = 0;
+    virtual HRESULT __stdcall raw_DownloadAriesEPLOS (
+        long nDevice,
+        VARIANT_BOOL bAllEPLDrives,
+        long nAxis,
+        BSTR bstrFile ) = 0;
+    virtual HRESULT __stdcall raw_GetStatusDLEx (
+        long * nTotal,
+        long * nBytes,
+        BSTR * bstrExtendedErrorMessage,
+        long * nStatus ) = 0;
+    virtual HRESULT __stdcall raw_WriteDelay (
+        long nValue ) = 0;
+    virtual HRESULT __stdcall raw_FindACR (
+        long nTransport,
+        VARIANT * nDevices ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_ComACRServerLib =
+    {0xd1f0e094,0xdf23,0x4213,{0x93,0xc1,0xb2,0xd9,0x99,0xe9,0xe0,0x5b}};
+extern "C" const GUID __declspec(selectany) DIID__IChannelEvents =
+    {0x957f976b,0xd90e,0x47e8,{0x94,0xfd,0x6c,0x4a,0x35,0xfe,0x19,0xb5}};
+extern "C" const GUID __declspec(selectany) CLSID_Channel =
+    {0x84c0eecf,0xda49,0x4d29,{0x82,0x08,0xca,0x04,0xaa,0xf5,0x19,0xca}};
+extern "C" const GUID __declspec(selectany) IID_IChannel =
+    {0x6c635423,0x8824,0x4852,{0xb8,0x33,0xca,0xce,0x08,0xe8,0xad,0x10}};
+extern "C" const GUID __declspec(selectany) IID_IStatus =
+    {0xf34d6531,0x433c,0x498c,{0xb5,0x59,0x62,0x07,0x9c,0x3e,0x9a,0xd3}};
+extern "C" const GUID __declspec(selectany) IID_ITerminal =
+    {0xbb432d5c,0xd0a2,0x408d,{0xb5,0x76,0x9b,0x38,0x8f,0x1d,0xdd,0x48}};
+extern "C" const GUID __declspec(selectany) IID_IContrl =
+    {0x5ce06ee2,0xc3a5,0x4894,{0x88,0x9b,0x04,0xc8,0x8c,0x43,0x2b,0x2c}};
+extern "C" const GUID __declspec(selectany) IID_IUtility =
+    {0x582d32a7,0x973f,0x4e04,{0x8a,0x91,0xb3,0xd5,0xa5,0x07,0x61,0x31}};
+
+//
+// Wrapper method implementations
+//
+
+#include "ComACRServer.tli"
+
+#pragma pack(pop)

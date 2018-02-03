@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UpperLevelSoft", "UpperLevelSoft\UpperLevelSoft.vcxproj", "{DB733CFC-7736-4436-8CC8-66CEE2966F34}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CameraCorrect", "CorrectPosition\CorrectPosition.vcxproj", "{5FCAFB49-A8EC-43DC-9698-655FBDD10F05}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PaintRobot_SetUp", "PaintRobot_SetUp\PaintRobot_SetUp.vdproj", "{42990A6A-9B05-4C3A-867B-82EE817C890B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB733CFC-7736-4436-8CC8-66CEE2966F34}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DB733CFC-7736-4436-8CC8-66CEE2966F34}.Debug|Win32.Build.0 = Debug|Win32
+		{DB733CFC-7736-4436-8CC8-66CEE2966F34}.Release|Win32.ActiveCfg = Release|Win32
+		{DB733CFC-7736-4436-8CC8-66CEE2966F34}.Release|Win32.Build.0 = Release|Win32
+		{5FCAFB49-A8EC-43DC-9698-655FBDD10F05}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5FCAFB49-A8EC-43DC-9698-655FBDD10F05}.Debug|Win32.Build.0 = Debug|Win32
+		{5FCAFB49-A8EC-43DC-9698-655FBDD10F05}.Release|Win32.ActiveCfg = Release|Win32
+		{5FCAFB49-A8EC-43DC-9698-655FBDD10F05}.Release|Win32.Build.0 = Release|Win32
+		{42990A6A-9B05-4C3A-867B-82EE817C890B}.Debug|Win32.ActiveCfg = Debug
+		{42990A6A-9B05-4C3A-867B-82EE817C890B}.Release|Win32.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

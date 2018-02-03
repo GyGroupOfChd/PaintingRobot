@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DB733CFC-7736-4436-8CC8-66CEE2966F34}</ProjectGuid>
+    <RootNamespace>UpperLevelSoft</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>.\UpperLevelSoft\PMAC\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>.\UpperLevelSoft\PMAC\LIB;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>PComm32.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\icon1.ico" />
+    <None Include="res\icon2.ico" />
+    <None Include="res\icon3.ico" />
+    <None Include="res\icon4.ico" />
+    <None Include="res\UpperLevelSoft.ico" />
+    <None Include="res\UpperLevelSoft.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ADIO16.h" />
+    <ClInclude Include="CButtonST文件\BackgroundUtil.h" />
+    <ClInclude Include="CButtonST文件\BCMenu.h" />
+    <ClInclude Include="CButtonST文件\BkDialog.h" />
+    <ClInclude Include="CButtonST文件\BtnST.h" />
+    <ClInclude Include="CButtonST文件\CeXDib.h" />
+    <ClInclude Include="CButtonST文件\ShadeButtonST.h" />
+    <ClInclude Include="CButtonST文件\WinXPButtonST.h" />
+    <ClInclude Include="DetailSettingDlg.h" />
+    <ClInclude Include="DownParmAdjust.h" />
+    <ClInclude Include="DownParmValue.h" />
+    <ClInclude Include="DownParmValueHead.h" />
+    <ClInclude Include="gyMath.h" />
+    <ClInclude Include="LowMoniter.h" />
+    <ClInclude Include="mscomm.h" />
+    <ClInclude Include="PaintCell.h" />
+    <ClInclude Include="PaintDlg.h" />
+    <ClInclude Include="Parm.h" />
+    <ClInclude Include="Pcomm32dll.h" />
+    <ClInclude Include="PlcCommu.h" />
+    <ClInclude Include="PMAC\Pmac.h" />
+    <ClInclude Include="PMAC\RUNTIME.H" />
+    <ClInclude Include="RecognizePicture.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ResultAdapter.h" />
+    <ClInclude Include="SharpRed.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="UpperLevelSoft.h" />
+    <ClInclude Include="UpperLevelSoftDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CButtonST文件\BackgroundUtil.cpp" />
+    <ClCompile Include="CButtonST文件\BCMenu.cpp" />
+    <ClCompile Include="CButtonST文件\BkDialog.cpp" />
+    <ClCompile Include="CButtonST文件\BtnST.cpp" />
+    <ClCompile Include="CButtonST文件\CeXDib.cpp" />
+    <ClCompile Include="CButtonST文件\ShadeButtonST.cpp" />
+    <ClCompile Include="CButtonST文件\WinXPButtonST.cpp" />
+    <ClCompile Include="DetailSettingDlg.cpp" />
+    <ClCompile Include="DownParmAdjust.cpp" />
+    <ClCompile Include="DownParmValue.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="LowMoniter.cpp" />
+    <ClCompile Include="mscomm.cpp" />
+    <ClCompile Include="PaintCell.cpp" />
+    <ClCompile Include="PaintDlg.cpp" />
+    <ClCompile Include="Parm.cpp" />
+    <ClCompile Include="PlcCommu.cpp" />
+    <ClCompile Include="PMAC\Pmac.cpp" />
+    <ClCompile Include="PMAC\Runtime.cpp" />
+    <ClCompile Include="RecognizePicture.cpp" />
+    <ClCompile Include="ResultAdapter.cpp" />
+    <ClCompile Include="SharpRed.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="UpperLevelSoft.cpp" />
+    <ClCompile Include="UpperLevelSoftDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UpperLevelSoft.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="UpperLevelSoft.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

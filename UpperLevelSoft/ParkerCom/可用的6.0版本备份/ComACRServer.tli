@@ -1,0 +1,1862 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (72e4512b).
+//
+// ComACRServer.tli
+//
+// Wrapper implementations for Win32 type library ..\ComACRServer.tlb
+// compiler-generated file created 10/21/11 at 09:59:02 - DO NOT EDIT!
+
+#pragma once
+
+//
+// dispinterface _IChannelEvents wrapper method implementations
+//
+
+inline HRESULT _IChannelEvents::StatusWaiting ( long msgID, long error ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003\x0003", msgID, error);
+    return _result;
+}
+
+inline HRESULT _IChannelEvents::WatchdogTimeout ( ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline HRESULT _IChannelEvents::WatchdogReconnect ( ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline HRESULT _IChannelEvents::DataWaiting ( ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_ERROR, (void*)&_result, NULL);
+    return _result;
+}
+
+inline HRESULT _IChannelEvents::AlarmEvent ( long iAlarmType, long iAlarmParm, long iAlarmCnt ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003\x0003\x0003", iAlarmType, iAlarmParm, iAlarmCnt);
+    return _result;
+}
+
+//
+// interface IChannel wrapper method implementations
+//
+
+inline _bstr_t IChannel::GetbstrVersion ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IChannel::GetnPort ( ) {
+    long _result;
+    HRESULT _hr = get_nPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutnPort ( long pVal ) {
+    HRESULT _hr = put_nPort(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetnBPS ( ) {
+    long _result;
+    HRESULT _hr = get_nBPS(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutnBPS ( long pVal ) {
+    HRESULT _hr = put_nBPS(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IChannel::GetbstrIP ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrIP(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IChannel::PutbstrIP ( _bstr_t pVal ) {
+    HRESULT _hr = put_bstrIP(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetnBus ( ) {
+    long _result;
+    HRESULT _hr = get_nBus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutnBus ( long pVal ) {
+    HRESULT _hr = put_nBus(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IChannel::GetisOffline ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_isOffline(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IChannel::GetnStatusWaitRate ( ) {
+    long _result;
+    HRESULT _hr = get_nStatusWaitRate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutnStatusWaitRate ( long pVal ) {
+    HRESULT _hr = put_nStatusWaitRate(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IChannel::GetbOnConnectTest ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bOnConnectTest(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutbOnConnectTest ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_bOnConnectTest(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetnCard ( ) {
+    long _result;
+    HRESULT _hr = get_nCard(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IChannel::GetbstrUSBSerialNumber ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrUSBSerialNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IChannel::PutbstrUSBSerialNumber ( _bstr_t pVal ) {
+    HRESULT _hr = put_bstrUSBSerialNumber(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IChannel::GetbTerminalLock ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bTerminalLock(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutbTerminalLock ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_bTerminalLock(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetnProgramDownloadEcho ( ) {
+    long _result;
+    HRESULT _hr = get_nProgramDownloadEcho(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutnProgramDownloadEcho ( long pVal ) {
+    HRESULT _hr = put_nProgramDownloadEcho(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetnLastErrorCode ( ) {
+    long _result;
+    HRESULT _hr = get_nLastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IChannel::GetbstrLastError ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrLastError(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IChannel::GetbOldErrorRets ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bOldErrorRets(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutbOldErrorRets ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_bOldErrorRets(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetnDataWaitRate ( ) {
+    long _result;
+    HRESULT _hr = get_nDataWaitRate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutnDataWaitRate ( long pVal ) {
+    HRESULT _hr = put_nDataWaitRate(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetnASCIIBufSize ( ) {
+    long _result;
+    HRESULT _hr = get_nASCIIBufSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutnASCIIBufSize ( long pVal ) {
+    HRESULT _hr = put_nASCIIBufSize(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetnPCSPLCBufAvail ( ) {
+    long _result;
+    HRESULT _hr = get_nPCSPLCBufAvail(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutnMinEventDelay ( long pVal ) {
+    HRESULT _hr = put_nMinEventDelay(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetnMinEventDelay ( ) {
+    long _result;
+    HRESULT _hr = get_nMinEventDelay(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IChannel::GetbTalkingTo ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bTalkingTo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IChannel::GetPollRate ( ) {
+    long _result;
+    HRESULT _hr = get_PollRate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutPollRate ( long pVal ) {
+    HRESULT _hr = put_PollRate(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetDeltaT ( ) {
+    long _result;
+    HRESULT _hr = get_DeltaT(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IChannel::GetMinPollRate ( ) {
+    long _result;
+    HRESULT _hr = get_MinPollRate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutMinPollRate ( long pVal ) {
+    HRESULT _hr = put_MinPollRate(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IChannel::GetSendSynchronousEvents ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_SendSynchronousEvents(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutSendSynchronousEvents ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_SendSynchronousEvents(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetSupressStatusDelete ( ) {
+    long _result;
+    HRESULT _hr = get_SupressStatusDelete(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutSupressStatusDelete ( long pVal ) {
+    HRESULT _hr = put_SupressStatusDelete(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetnMoveProfile ( ) {
+    long _result;
+    HRESULT _hr = get_nMoveProfile(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutnMoveProfile ( long pVal ) {
+    HRESULT _hr = put_nMoveProfile(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IChannel::GetfMoveVEL ( ) {
+    float _result;
+    HRESULT _hr = get_fMoveVEL(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutfMoveVEL ( float pVal ) {
+    HRESULT _hr = put_fMoveVEL(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IChannel::GetfMoveFVEL ( ) {
+    float _result;
+    HRESULT _hr = get_fMoveFVEL(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutfMoveFVEL ( float pVal ) {
+    HRESULT _hr = put_fMoveFVEL(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IChannel::GetfMoveACC ( ) {
+    float _result;
+    HRESULT _hr = get_fMoveACC(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutfMoveACC ( float pVal ) {
+    HRESULT _hr = put_fMoveACC(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetnMoveMode ( ) {
+    long _result;
+    HRESULT _hr = get_nMoveMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutnMoveMode ( long pVal ) {
+    HRESULT _hr = put_nMoveMode(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IChannel::GetbMoveAbsolute ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bMoveAbsolute(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutbMoveAbsolute ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_bMoveAbsolute(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetnMoveCounter ( ) {
+    long _result;
+    HRESULT _hr = get_nMoveCounter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutnMoveCounter ( long pVal ) {
+    HRESULT _hr = put_nMoveCounter(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IChannel::GetnArcMode ( ) {
+    long _result;
+    HRESULT _hr = get_nArcMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutnArcMode ( long pVal ) {
+    HRESULT _hr = put_nArcMode(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IChannel::GetbArcAbsolute ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bArcAbsolute(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutbArcAbsolute ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_bArcAbsolute(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IChannel::GetbArcCCW ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bArcCCW(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IChannel::PutbArcCCW ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_bArcCCW(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IChannel::AddAlarmEvent ( long iAlarmEvent, long iAlarmParm ) {
+    HRESULT _hr = raw_AddAlarmEvent(iAlarmEvent, iAlarmParm);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::DeleteAlarmEvent ( long iAlarmEvent, long iAlarmParm ) {
+    HRESULT _hr = raw_DeleteAlarmEvent(iAlarmEvent, iAlarmParm);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::Disconnect ( ) {
+    HRESULT _hr = raw_Disconnect();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::Connect ( long nTransport, long nIndex ) {
+    HRESULT _hr = raw_Connect(nTransport, nIndex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t IChannel::GetACRGroup ( _bstr_t bstrRequest ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetACRGroup(bstrRequest, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t IChannel::GetACRCustom ( _bstr_t bstrRequest ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetACRCustom(bstrRequest, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t IChannel::GetACRMemory ( long nType, long nAddress, long nCount ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetACRMemory(nType, nAddress, nCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline long IChannel::AddACRGroup ( _bstr_t bstrRequest ) {
+    long _result;
+    HRESULT _hr = raw_AddACRGroup(bstrRequest, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IChannel::AddACRCustom ( _bstr_t bstrRequest ) {
+    long _result;
+    HRESULT _hr = raw_AddACRCustom(bstrRequest, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IChannel::AddACRMemory ( long nType, long nAddress, long nCount ) {
+    long _result;
+    HRESULT _hr = raw_AddACRMemory(nType, nAddress, nCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t IChannel::GetStatus ( long nMsgid ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetStatus(nMsgid, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT IChannel::DelStatus ( long nMsgid ) {
+    HRESULT _hr = raw_DelStatus(nMsgid);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IChannel::GetLocalAddr ( long nProg, long nType, long * nSize ) {
+    long _result;
+    HRESULT _hr = raw_GetLocalAddr(nProg, nType, nSize, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IChannel::GetLocalArrayAddr ( long nProg, long nType, long nArray, long * nSize ) {
+    long _result;
+    HRESULT _hr = raw_GetLocalArrayAddr(nProg, nType, nArray, nSize, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IChannel::IsFlagSet ( long nFlagGrp, long nFlagNdx ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_IsFlagSet(nFlagGrp, nFlagNdx, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IChannel::TestConnect ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_TestConnect(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IChannel::GetParmInfo ( long nParameter, long * nType, long * nCode, long * nIndex, BSTR * bstrCatagory, BSTR * bstrDesc ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_GetParmInfo(nParameter, nType, nCode, nIndex, bstrCatagory, bstrDesc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IChannel::SetWatchdog ( long nInterval, long nRetries ) {
+    HRESULT _hr = raw_SetWatchdog(nInterval, nRetries);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t IChannel::GetACRGroupRaw ( long nType, long nCode, long nIndex ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetACRGroupRaw(nType, nCode, nIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline long IChannel::AddACRGroupRaw ( long nType, long nCode, long nIndex ) {
+    long _result;
+    HRESULT _hr = raw_AddACRGroupRaw(nType, nCode, nIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IChannel::GetParmType ( long nParameter ) {
+    long _result;
+    HRESULT _hr = raw_GetParmType(nParameter, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IChannel::GetParmAddr ( long nParameter ) {
+    long _result;
+    HRESULT _hr = raw_GetParmAddr(nParameter, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IChannel::GetFastStatusPeriod ( ) {
+    HRESULT _hr = raw_GetFastStatusPeriod();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::SetFastStatusPeriod ( long nValue ) {
+    HRESULT _hr = raw_SetFastStatusPeriod(nValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::GetFastStatusEnable ( ) {
+    HRESULT _hr = raw_GetFastStatusEnable();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::SetFastStatusEnable ( VARIANT_BOOL newVal ) {
+    HRESULT _hr = raw_SetFastStatusEnable(newVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::FastStatusSetup ( long nNumofElements, BSTR * * StrArray ) {
+    HRESULT _hr = raw_FastStatusSetup(nNumofElements, StrArray);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IChannel::GetSingleAxisLocalArrayAddr ( long nProg, long nType, long nArray, long * nSize ) {
+    long _result;
+    HRESULT _hr = raw_GetSingleAxisLocalArrayAddr(nProg, nType, nArray, nSize, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t IChannel::GetSingleAxisACRMemory ( long nType, long nAddress, long nCount ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetSingleAxisACRMemory(nType, nAddress, nCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT IChannel::InitSmartPLC ( ) {
+    HRESULT _hr = raw_InitSmartPLC();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IChannel::ReadSmartPLC ( BSTR * pData ) {
+    long _result;
+    HRESULT _hr = raw_ReadSmartPLC(pData, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IChannel::WriteSmartPLC ( long nBytes, BSTR * pbstrData ) {
+    HRESULT _hr = raw_WriteSmartPLC(nBytes, pbstrData);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IChannel::Read ( ) {
+    BSTR _result;
+    HRESULT _hr = raw_Read(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IChannel::Write ( _bstr_t send ) {
+    HRESULT _hr = raw_Write(send);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IChannel::TalkTo ( long nMode, long nIndex ) {
+    long _result;
+    HRESULT _hr = raw_TalkTo(nMode, nIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IChannel::DownloadOS ( long nDevice, _bstr_t bstrFile ) {
+    HRESULT _hr = raw_DownloadOS(nDevice, bstrFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IChannel::GetStatusDL ( long * nTotal, long * nBytes ) {
+    long _result;
+    HRESULT _hr = raw_GetStatusDL(nTotal, nBytes, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IChannel::StopDownload ( ) {
+    HRESULT _hr = raw_StopDownload();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::DownloadFile ( _bstr_t bstrPrg, _bstr_t bstrFile ) {
+    HRESULT _hr = raw_DownloadFile(bstrPrg, bstrFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::UploadFile ( _bstr_t bstrPrg, _bstr_t bstrFile ) {
+    HRESULT _hr = raw_UploadFile(bstrPrg, bstrFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IChannel::DeviceIoControl ( long dwloControlCode, long * saBuffer ) {
+    long _result;
+    HRESULT _hr = raw_DeviceIoControl(dwloControlCode, saBuffer, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IChannel::DeviceIoControl2 ( long dwloControlCode, long * saBuffer, long * saBuffer2 ) {
+    long _result;
+    HRESULT _hr = raw_DeviceIoControl2(dwloControlCode, saBuffer, saBuffer2, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IChannel::DownloadEPL ( long nDevice, _bstr_t bstrFile ) {
+    HRESULT _hr = raw_DownloadEPL(nDevice, bstrFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::DownloadAriesEPLOS ( long nDevice, VARIANT_BOOL bAllEPLDrives, long nAxis, _bstr_t bstrFile ) {
+    HRESULT _hr = raw_DownloadAriesEPLOS(nDevice, bAllEPLDrives, nAxis, bstrFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IChannel::GetStatusDLEx ( long * nTotal, long * nBytes, BSTR * bstrExtendedErrorMessage ) {
+    long _result;
+    HRESULT _hr = raw_GetStatusDLEx(nTotal, nBytes, bstrExtendedErrorMessage, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IChannel::WriteDelay ( long nValue ) {
+    HRESULT _hr = raw_WriteDelay(nValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t IChannel::FindACR ( long nTransport ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_FindACR(nTransport, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT IChannel::SetFlag ( long nBit, VARIANT_BOOL bValue, VARIANT_BOOL bFast ) {
+    HRESULT _hr = raw_SetFlag(nBit, bValue, bFast);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::SetParmFloat ( long nPparm, float fValue, VARIANT_BOOL bFast ) {
+    HRESULT _hr = raw_SetParmFloat(nPparm, fValue, bFast);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::SetParmLong ( long nPparm, long nValue, VARIANT_BOOL bFast ) {
+    HRESULT _hr = raw_SetParmLong(nPparm, nValue, bFast);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::SetGlobal ( long nCard, long nGlobal, double dValue, VARIANT_BOOL bFast ) {
+    HRESULT _hr = raw_SetGlobal(nCard, nGlobal, dValue, bFast);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::Move ( long nMask, const _variant_t & targets ) {
+    HRESULT _hr = raw_Move(nMask, targets);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::Arc ( long nMask, const _variant_t & targets ) {
+    HRESULT _hr = raw_Arc(nMask, targets);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::Stop ( VARIANT_BOOL bDecel ) {
+    HRESULT _hr = raw_Stop(bDecel);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::SendRES ( long nMask ) {
+    HRESULT _hr = raw_SendRES(nMask);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::GetMoveCounter ( long * nCounter, long * nIncrement ) {
+    HRESULT _hr = raw_GetMoveCounter(nCounter, nIncrement);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::SetMoveCounter ( long nCounter, long nIncrement ) {
+    HRESULT _hr = raw_SetMoveCounter(nCounter, nIncrement);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::SetACRMemory ( long nType, long nAddress, const _variant_t & values ) {
+    HRESULT _hr = raw_SetACRMemory(nType, nAddress, values);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::SetACRMemoryMask ( long nAddress, long nNAND, long nOR ) {
+    HRESULT _hr = raw_SetACRMemoryMask(nAddress, nNAND, nOR);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::SetParmLongMask ( long nPparm, long nNAND, long nOR ) {
+    HRESULT _hr = raw_SetParmLongMask(nPparm, nNAND, nOR);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::SetFOV ( long nMask, float fValue ) {
+    HRESULT _hr = raw_SetFOV(nMask, fValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::SetROV ( long nMask, float fValue ) {
+    HRESULT _hr = raw_SetROV(nMask, fValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IChannel::InitPerformance ( ) {
+    HRESULT _hr = raw_InitPerformance();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t IChannel::GetPerformance ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetPerformance(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT IChannel::MoveBatch ( long nType, const _variant_t & moves ) {
+    HRESULT _hr = raw_MoveBatch(nType, moves);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IStatus wrapper method implementations
+//
+
+inline _bstr_t IStatus::GetbstrVersion ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IStatus::GetnPort ( ) {
+    long _result;
+    HRESULT _hr = get_nPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IStatus::PutnPort ( long pVal ) {
+    HRESULT _hr = put_nPort(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IStatus::GetnBPS ( ) {
+    long _result;
+    HRESULT _hr = get_nBPS(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IStatus::PutnBPS ( long pVal ) {
+    HRESULT _hr = put_nBPS(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IStatus::GetbstrIP ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrIP(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IStatus::PutbstrIP ( _bstr_t pVal ) {
+    HRESULT _hr = put_bstrIP(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IStatus::GetnBus ( ) {
+    long _result;
+    HRESULT _hr = get_nBus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IStatus::PutnBus ( long pVal ) {
+    HRESULT _hr = put_nBus(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IStatus::GetisOffline ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_isOffline(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IStatus::GetnStatusWaitRate ( ) {
+    long _result;
+    HRESULT _hr = get_nStatusWaitRate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IStatus::PutnStatusWaitRate ( long pVal ) {
+    HRESULT _hr = put_nStatusWaitRate(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IStatus::GetbOnConnectTest ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bOnConnectTest(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IStatus::PutbOnConnectTest ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_bOnConnectTest(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IStatus::GetnCard ( ) {
+    long _result;
+    HRESULT _hr = get_nCard(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IStatus::GetbstrUSBSerialNumber ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrUSBSerialNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IStatus::PutbstrUSBSerialNumber ( _bstr_t pVal ) {
+    HRESULT _hr = put_bstrUSBSerialNumber(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IStatus::Disconnect ( ) {
+    HRESULT _hr = raw_Disconnect();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IStatus::Connect ( long nTransport, long nIndex ) {
+    HRESULT _hr = raw_Connect(nTransport, nIndex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t IStatus::GetACRGroup ( _bstr_t bstrRequest ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetACRGroup(bstrRequest, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t IStatus::GetACRCustom ( _bstr_t bstrRequest ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetACRCustom(bstrRequest, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t IStatus::GetACRMemory ( long nType, long nAddress, long nCount ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetACRMemory(nType, nAddress, nCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline long IStatus::AddACRGroup ( _bstr_t bstrRequest ) {
+    long _result;
+    HRESULT _hr = raw_AddACRGroup(bstrRequest, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IStatus::AddACRCustom ( _bstr_t bstrRequest ) {
+    long _result;
+    HRESULT _hr = raw_AddACRCustom(bstrRequest, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IStatus::AddACRMemory ( long nType, long nAddress, long nCount ) {
+    long _result;
+    HRESULT _hr = raw_AddACRMemory(nType, nAddress, nCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t IStatus::GetStatus ( long nMsgid ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetStatus(nMsgid, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT IStatus::DelStatus ( long nMsgid ) {
+    HRESULT _hr = raw_DelStatus(nMsgid);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IStatus::GetLocalAddr ( long nProg, long nType, long * nSize ) {
+    long _result;
+    HRESULT _hr = raw_GetLocalAddr(nProg, nType, nSize, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IStatus::GetLocalArrayAddr ( long nProg, long nType, long nArray, long * nSize ) {
+    long _result;
+    HRESULT _hr = raw_GetLocalArrayAddr(nProg, nType, nArray, nSize, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IStatus::IsFlagSet ( long nFlagGrp, long nFlagNdx ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_IsFlagSet(nFlagGrp, nFlagNdx, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IStatus::TestConnect ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_TestConnect(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IStatus::GetParmInfo ( long nParameter, long * nType, long * nCode, long * nIndex, BSTR * bstrCatagory, BSTR * bstrDesc ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_GetParmInfo(nParameter, nType, nCode, nIndex, bstrCatagory, bstrDesc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IStatus::SetWatchdog ( long nInterval, long nRetries ) {
+    HRESULT _hr = raw_SetWatchdog(nInterval, nRetries);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t IStatus::GetACRGroupRaw ( long nType, long nCode, long nIndex ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetACRGroupRaw(nType, nCode, nIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline long IStatus::AddACRGroupRaw ( long nType, long nCode, long nIndex ) {
+    long _result;
+    HRESULT _hr = raw_AddACRGroupRaw(nType, nCode, nIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IStatus::GetParmType ( long nParameter ) {
+    long _result;
+    HRESULT _hr = raw_GetParmType(nParameter, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IStatus::GetParmAddr ( long nParameter ) {
+    long _result;
+    HRESULT _hr = raw_GetParmAddr(nParameter, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IStatus::GetFastStatusPeriod ( ) {
+    HRESULT _hr = raw_GetFastStatusPeriod();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IStatus::SetFastStatusPeriod ( long nValue ) {
+    HRESULT _hr = raw_SetFastStatusPeriod(nValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IStatus::GetFastStatusEnable ( ) {
+    HRESULT _hr = raw_GetFastStatusEnable();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IStatus::SetFastStatusEnable ( VARIANT_BOOL newVal ) {
+    HRESULT _hr = raw_SetFastStatusEnable(newVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IStatus::FastStatusSetup ( long nNumofElements, BSTR * * StrArray ) {
+    HRESULT _hr = raw_FastStatusSetup(nNumofElements, StrArray);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IStatus::GetSingleAxisLocalArrayAddr ( long nProg, long nType, long nArray, long * nSize ) {
+    long _result;
+    HRESULT _hr = raw_GetSingleAxisLocalArrayAddr(nProg, nType, nArray, nSize, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IStatus::GetPollRate ( ) {
+    long _result;
+    HRESULT _hr = get_PollRate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IStatus::PutPollRate ( long pVal ) {
+    HRESULT _hr = put_PollRate(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IStatus::GetDeltaT ( ) {
+    long _result;
+    HRESULT _hr = get_DeltaT(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t IStatus::GetSingleAxisACRMemory ( long nType, long nAddress, long nCount ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetSingleAxisACRMemory(nType, nAddress, nCount, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline long IStatus::GetMinPollRate ( ) {
+    long _result;
+    HRESULT _hr = get_MinPollRate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IStatus::PutMinPollRate ( long pVal ) {
+    HRESULT _hr = put_MinPollRate(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ITerminal wrapper method implementations
+//
+
+inline _bstr_t ITerminal::GetbstrVersion ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long ITerminal::GetnPort ( ) {
+    long _result;
+    HRESULT _hr = get_nPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ITerminal::PutnPort ( long pVal ) {
+    HRESULT _hr = put_nPort(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ITerminal::GetnBPS ( ) {
+    long _result;
+    HRESULT _hr = get_nBPS(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ITerminal::PutnBPS ( long pVal ) {
+    HRESULT _hr = put_nBPS(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t ITerminal::GetbstrIP ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrIP(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ITerminal::PutbstrIP ( _bstr_t pVal ) {
+    HRESULT _hr = put_bstrIP(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ITerminal::GetnBus ( ) {
+    long _result;
+    HRESULT _hr = get_nBus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ITerminal::PutnBus ( long pVal ) {
+    HRESULT _hr = put_nBus(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL ITerminal::GetisOffline ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_isOffline(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITerminal::GetbOnConnectTest ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bOnConnectTest(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ITerminal::PutbOnConnectTest ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_bOnConnectTest(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ITerminal::GetnCard ( ) {
+    long _result;
+    HRESULT _hr = get_nCard(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t ITerminal::GetbstrUSBSerialNumber ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrUSBSerialNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ITerminal::PutbstrUSBSerialNumber ( _bstr_t pVal ) {
+    HRESULT _hr = put_bstrUSBSerialNumber(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long ITerminal::GetnDataWaitRate ( ) {
+    long _result;
+    HRESULT _hr = get_nDataWaitRate(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void ITerminal::PutnDataWaitRate ( long pVal ) {
+    HRESULT _hr = put_nDataWaitRate(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT ITerminal::Disconnect ( ) {
+    HRESULT _hr = raw_Disconnect();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITerminal::Connect ( long nTransport, long nIndex ) {
+    HRESULT _hr = raw_Connect(nTransport, nIndex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL ITerminal::TestConnect ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_TestConnect(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ITerminal::SetWatchdog ( long nInterval, long nRetries ) {
+    HRESULT _hr = raw_SetWatchdog(nInterval, nRetries);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t ITerminal::Read ( ) {
+    BSTR _result;
+    HRESULT _hr = raw_Read(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT ITerminal::Write ( _bstr_t send ) {
+    HRESULT _hr = raw_Write(send);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long ITerminal::TalkTo ( long nMode, long nIndex ) {
+    long _result;
+    HRESULT _hr = raw_TalkTo(nMode, nIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IContrl wrapper method implementations
+//
+
+inline _bstr_t IContrl::GetbstrVersion ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IContrl::GetnPort ( ) {
+    long _result;
+    HRESULT _hr = get_nPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutnPort ( long pVal ) {
+    HRESULT _hr = put_nPort(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IContrl::GetnBPS ( ) {
+    long _result;
+    HRESULT _hr = get_nBPS(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutnBPS ( long pVal ) {
+    HRESULT _hr = put_nBPS(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IContrl::GetbstrIP ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrIP(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IContrl::PutbstrIP ( _bstr_t pVal ) {
+    HRESULT _hr = put_bstrIP(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IContrl::GetnBus ( ) {
+    long _result;
+    HRESULT _hr = get_nBus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutnBus ( long pVal ) {
+    HRESULT _hr = put_nBus(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IContrl::GetisOffline ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_isOffline(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IContrl::GetbOnConnectTest ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bOnConnectTest(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutbOnConnectTest ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_bOnConnectTest(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IContrl::GetnMoveProfile ( ) {
+    long _result;
+    HRESULT _hr = get_nMoveProfile(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutnMoveProfile ( long pVal ) {
+    HRESULT _hr = put_nMoveProfile(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IContrl::GetfMoveVEL ( ) {
+    float _result;
+    HRESULT _hr = get_fMoveVEL(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutfMoveVEL ( float pVal ) {
+    HRESULT _hr = put_fMoveVEL(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IContrl::GetfMoveFVEL ( ) {
+    float _result;
+    HRESULT _hr = get_fMoveFVEL(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutfMoveFVEL ( float pVal ) {
+    HRESULT _hr = put_fMoveFVEL(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IContrl::GetfMoveACC ( ) {
+    float _result;
+    HRESULT _hr = get_fMoveACC(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutfMoveACC ( float pVal ) {
+    HRESULT _hr = put_fMoveACC(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IContrl::GetnMoveMode ( ) {
+    long _result;
+    HRESULT _hr = get_nMoveMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutnMoveMode ( long pVal ) {
+    HRESULT _hr = put_nMoveMode(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IContrl::GetbMoveAbsolute ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bMoveAbsolute(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutbMoveAbsolute ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_bMoveAbsolute(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IContrl::GetnMoveCounter ( ) {
+    long _result;
+    HRESULT _hr = get_nMoveCounter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutnMoveCounter ( long pVal ) {
+    HRESULT _hr = put_nMoveCounter(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IContrl::GetnArcMode ( ) {
+    long _result;
+    HRESULT _hr = get_nArcMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutnArcMode ( long pVal ) {
+    HRESULT _hr = put_nArcMode(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IContrl::GetbArcAbsolute ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bArcAbsolute(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutbArcAbsolute ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_bArcAbsolute(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IContrl::GetbArcCCW ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bArcCCW(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IContrl::PutbArcCCW ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_bArcCCW(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IContrl::Disconnect ( ) {
+    HRESULT _hr = raw_Disconnect();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::Connect ( long nTransport, long nIndex ) {
+    HRESULT _hr = raw_Connect(nTransport, nIndex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::SetFlag ( long nBit, VARIANT_BOOL bValue, VARIANT_BOOL bFast ) {
+    HRESULT _hr = raw_SetFlag(nBit, bValue, bFast);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::SetParmFloat ( long nPparm, float fValue, VARIANT_BOOL bFast ) {
+    HRESULT _hr = raw_SetParmFloat(nPparm, fValue, bFast);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::SetParmLong ( long nPparm, long nValue, VARIANT_BOOL bFast ) {
+    HRESULT _hr = raw_SetParmLong(nPparm, nValue, bFast);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::SetGlobal ( long nCard, long nGlobal, double dValue, VARIANT_BOOL bFast ) {
+    HRESULT _hr = raw_SetGlobal(nCard, nGlobal, dValue, bFast);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::Move ( long nMask, const _variant_t & targets ) {
+    HRESULT _hr = raw_Move(nMask, targets);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::Arc ( long nMask, const _variant_t & targets ) {
+    HRESULT _hr = raw_Arc(nMask, targets);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::Stop ( VARIANT_BOOL bDecel ) {
+    HRESULT _hr = raw_Stop(bDecel);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::SendRES ( long nMask ) {
+    HRESULT _hr = raw_SendRES(nMask);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IContrl::TestConnect ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_TestConnect(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IContrl::SetWatchdog ( long nInterval, long nRetries ) {
+    HRESULT _hr = raw_SetWatchdog(nInterval, nRetries);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::GetMoveCounter ( long * nCounter, long * nIncrement ) {
+    HRESULT _hr = raw_GetMoveCounter(nCounter, nIncrement);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::SetMoveCounter ( long nCounter, long nIncrement ) {
+    HRESULT _hr = raw_SetMoveCounter(nCounter, nIncrement);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::SetACRMemory ( long nType, long nAddress, const _variant_t & values ) {
+    HRESULT _hr = raw_SetACRMemory(nType, nAddress, values);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::SetACRMemoryMask ( long nAddress, long nNAND, long nOR ) {
+    HRESULT _hr = raw_SetACRMemoryMask(nAddress, nNAND, nOR);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::SetParmLongMask ( long nPparm, long nNAND, long nOR ) {
+    HRESULT _hr = raw_SetParmLongMask(nPparm, nNAND, nOR);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::SetFOV ( long nMask, float fValue ) {
+    HRESULT _hr = raw_SetFOV(nMask, fValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::SetROV ( long nMask, float fValue ) {
+    HRESULT _hr = raw_SetROV(nMask, fValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IContrl::InitPerformance ( ) {
+    HRESULT _hr = raw_InitPerformance();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t IContrl::GetPerformance ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_GetPerformance(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT IContrl::MoveBatch ( long nType, const _variant_t & moves ) {
+    HRESULT _hr = raw_MoveBatch(nType, moves);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IUtility wrapper method implementations
+//
+
+inline _bstr_t IUtility::GetbstrVersion ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IUtility::GetnPort ( ) {
+    long _result;
+    HRESULT _hr = get_nPort(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUtility::PutnPort ( long pVal ) {
+    HRESULT _hr = put_nPort(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IUtility::GetnBPS ( ) {
+    long _result;
+    HRESULT _hr = get_nBPS(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUtility::PutnBPS ( long pVal ) {
+    HRESULT _hr = put_nBPS(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IUtility::GetbstrIP ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrIP(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IUtility::PutbstrIP ( _bstr_t pVal ) {
+    HRESULT _hr = put_bstrIP(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IUtility::GetnBus ( ) {
+    long _result;
+    HRESULT _hr = get_nBus(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUtility::PutnBus ( long pVal ) {
+    HRESULT _hr = put_nBus(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IUtility::GetisOffline ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_isOffline(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IUtility::GetbOnConnectTest ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_bOnConnectTest(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IUtility::PutbOnConnectTest ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_bOnConnectTest(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IUtility::GetnCard ( ) {
+    long _result;
+    HRESULT _hr = get_nCard(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IUtility::GetbstrUSBSerialNumber ( ) {
+    BSTR _result;
+    HRESULT _hr = get_bstrUSBSerialNumber(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IUtility::PutbstrUSBSerialNumber ( _bstr_t pVal ) {
+    HRESULT _hr = put_bstrUSBSerialNumber(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IUtility::Disconnect ( ) {
+    HRESULT _hr = raw_Disconnect();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IUtility::Connect ( long nTransport, long nIndex ) {
+    HRESULT _hr = raw_Connect(nTransport, nIndex);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IUtility::TestConnect ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = raw_TestConnect(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IUtility::SetWatchdog ( long nInterval, long nRetries ) {
+    HRESULT _hr = raw_SetWatchdog(nInterval, nRetries);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IUtility::DownloadOS ( long nDevice, _bstr_t bstrFile ) {
+    HRESULT _hr = raw_DownloadOS(nDevice, bstrFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IUtility::GetStatusDL ( long * nTotal, long * nBytes ) {
+    long _result;
+    HRESULT _hr = raw_GetStatusDL(nTotal, nBytes, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IUtility::StopDownload ( ) {
+    HRESULT _hr = raw_StopDownload();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IUtility::DownloadFile ( _bstr_t bstrPrg, _bstr_t bstrFile ) {
+    HRESULT _hr = raw_DownloadFile(bstrPrg, bstrFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IUtility::UploadFile ( _bstr_t bstrPrg, _bstr_t bstrFile ) {
+    HRESULT _hr = raw_UploadFile(bstrPrg, bstrFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IUtility::DeviceIoControl ( long dwloControlCode, long * saBuffer ) {
+    long _result;
+    HRESULT _hr = raw_DeviceIoControl(dwloControlCode, saBuffer, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IUtility::DeviceIoControl2 ( long dwloControlCode, long * saBuffer, long * saBuffer2 ) {
+    long _result;
+    HRESULT _hr = raw_DeviceIoControl2(dwloControlCode, saBuffer, saBuffer2, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IUtility::DownloadEPL ( long nDevice, _bstr_t bstrFile ) {
+    HRESULT _hr = raw_DownloadEPL(nDevice, bstrFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IUtility::DownloadAriesEPLOS ( long nDevice, VARIANT_BOOL bAllEPLDrives, long nAxis, _bstr_t bstrFile ) {
+    HRESULT _hr = raw_DownloadAriesEPLOS(nDevice, bAllEPLDrives, nAxis, bstrFile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IUtility::GetStatusDLEx ( long * nTotal, long * nBytes, BSTR * bstrExtendedErrorMessage ) {
+    long _result;
+    HRESULT _hr = raw_GetStatusDLEx(nTotal, nBytes, bstrExtendedErrorMessage, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IUtility::WriteDelay ( long nValue ) {
+    HRESULT _hr = raw_WriteDelay(nValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _variant_t IUtility::FindACR ( long nTransport ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_FindACR(nTransport, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}

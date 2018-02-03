@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="CButtonST">
+      <UniqueIdentifier>{7935c886-e70e-42d0-b559-6c9be3f9982f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CButtonST\CPP">
+      <UniqueIdentifier>{42eb904c-8e2e-4e8e-b6b7-ee1c37e6df0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CButtonST\H">
+      <UniqueIdentifier>{4167b248-fd5a-4c07-81f9-7d50a38a0df2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\UpperLevelSoft.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\UpperLevelSoft.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\icon1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\icon2.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\icon3.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\icon4.ico">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UpperLevelSoft.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UpperLevelSoftDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PaintCell.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Parm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DetailSettingDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultAdapter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gyMath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RecognizePicture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CButtonST文件\WinXPButtonST.h">
+      <Filter>CButtonST\H</Filter>
+    </ClInclude>
+    <ClInclude Include="CButtonST文件\BackgroundUtil.h">
+      <Filter>CButtonST\H</Filter>
+    </ClInclude>
+    <ClInclude Include="CButtonST文件\BCMenu.h">
+      <Filter>CButtonST\H</Filter>
+    </ClInclude>
+    <ClInclude Include="CButtonST文件\BkDialog.h">
+      <Filter>CButtonST\H</Filter>
+    </ClInclude>
+    <ClInclude Include="CButtonST文件\BtnST.h">
+      <Filter>CButtonST\H</Filter>
+    </ClInclude>
+    <ClInclude Include="CButtonST文件\CeXDib.h">
+      <Filter>CButtonST\H</Filter>
+    </ClInclude>
+    <ClInclude Include="CButtonST文件\ShadeButtonST.h">
+      <Filter>CButtonST\H</Filter>
+    </ClInclude>
+    <ClInclude Include="PlcCommu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mscomm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PaintDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PMAC\RUNTIME.H">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PMAC\Pmac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Pcomm32dll.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LowMoniter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DownParmValue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ADIO16.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SharpRed.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DownParmAdjust.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DownParmValueHead.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="UpperLevelSoft.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UpperLevelSoftDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Parm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PaintCell.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DetailSettingDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultAdapter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RecognizePicture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CButtonST文件\WinXPButtonST.cpp">
+      <Filter>CButtonST\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="CButtonST文件\BackgroundUtil.cpp">
+      <Filter>CButtonST\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="CButtonST文件\BCMenu.cpp">
+      <Filter>CButtonST\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="CButtonST文件\BkDialog.cpp">
+      <Filter>CButtonST\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="CButtonST文件\BtnST.cpp">
+      <Filter>CButtonST\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="CButtonST文件\CeXDib.cpp">
+      <Filter>CButtonST\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="CButtonST文件\ShadeButtonST.cpp">
+      <Filter>CButtonST\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="PlcCommu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mscomm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PaintDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PMAC\Pmac.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PMAC\Runtime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LowMoniter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DownParmValue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SharpRed.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DownParmAdjust.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UpperLevelSoft.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
