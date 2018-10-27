@@ -1491,7 +1491,7 @@ bool DownValue::StartOpenPlc(CString Directory,CoordinateFrame m_CoordinateFrame
 {
 	CString PointXY;             //喷涂起点坐标
 	float ChangedFrameX=m_CoordinateFrame.BeginXPoint*cos(m_CoordinateFrame.FrameRange)+m_CoordinateFrame.BeginYPoint*sin(m_CoordinateFrame.FrameRange);  //得到在新坐标系下起点坐标
-	float ChangedFrameY=m_CoordinateFrame.BeginYPoint*cos(m_CoordinateFrame.FrameRange)-m_CoordinateFrame.BeginXPoint*sin(m_CoordinateFrame.FrameRange);
+	float ChangedFrameY=(m_CoordinateFrame.BeginYPoint+2)*cos(m_CoordinateFrame.FrameRange)-m_CoordinateFrame.BeginXPoint*sin(m_CoordinateFrame.FrameRange);
 	PointXY.Format("x %f y %f\n",ChangedFrameX,ChangedFrameY);
 	CString DirectoryFilePlc="";
 	DirectoryFilePlc=Directory+"\\DownPlcAndMotion.pmc";
@@ -1694,9 +1694,9 @@ void DownValue::CheckHeight(float Height)
 
 bool DownValue::WriteDelayParm(float OpenDelay, float CloseDelay,FILE* fp)
 {
-	CString Storage="";
+/*	CString Storage="";
 	Storage.Format("Op %f Cl %f\n",OpenDelay,CloseDelay);
-	fwrite(Storage,strlen(Storage),1,fp);	
+	fwrite(Storage,strlen(Storage),1,fp);*/	
 
 	return false;
 }

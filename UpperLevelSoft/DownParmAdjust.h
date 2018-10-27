@@ -97,10 +97,29 @@ public:
 		
 		//////////////////////////////////////////////////////////////////////////
 		TransitTheRealWorkPartsOftheRows(DownParm,TransitValue);//整体平移
-		if (!bUnEvenRow)//偶数列再移动60mm
+
+
+		/*		int EXTRA_TRANSIT_FOR_EVEN_ROW=-40;初始文件为-40，可以根据修改文件修改参数*/
+		int EXTRA_TRANSIT_FOR_EVEN_ROW;
+		FILE *fp;
+		char buffer[256];
+		if ( fp=fopen("E:\\偶数列移动设置.txt","r"));
+		fgets(buffer,255,fp); 
+		EXTRA_TRANSIT_FOR_EVEN_ROW=atoi(buffer);
+		fclose(fp);
+
+		if (!bUnEvenRow)//偶数列再移动若干mm
 		{
 			TransitTheRealWorkPartsOftheRows(DownParm,EXTRA_TRANSIT_FOR_EVEN_ROW);//整体平移
 		}
+
+		FILE *m_p=fopen("E:\\偶数列移动设置.txt","w");
+		CString str;
+		str.Format(_T("%d"),EXTRA_TRANSIT_FOR_EVEN_ROW);
+		fwrite(str,1,str.GetLength(),m_p);
+		str.ReleaseBuffer();
+		fclose(m_p);
+
 		//VectorTypePoint::iterator it_vCheckPoint=DownParm.begin();
 		//it_vCheckPoint++;//第一个是起始位置
 		//for (it_vCheckPoint;it_vCheckPoint!=DownParm.end();it_vCheckPoint++)
