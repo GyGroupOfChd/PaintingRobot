@@ -74,7 +74,7 @@ struct GunParm
 #define MAXPAINTRANGEX 1850    //当前设计的喷涂机器，X轴最大喷涂范围为1250mm
 #define DEFAULT_NUM_OF_GUN 4//默认喷枪数
 #define DEFAULT_TRANSIT_VALUE 100//整体下移的参数，单位mm
-#define EXTRA_TRANSIT_FOR_EVEN_ROW -60//偶数列额外的下移距离，单位mm,Y增加为正
+//#define EXTRA_TRANSIT_FOR_EVEN_ROW -60//偶数列额外的下移距离，单位mm,Y增加为正
 //对于第一个相机来说，在整个系统中占据非常重要的作用，首先需要确定在当前位置，喷枪的启动位置；
 //一下数据FIRSTCAMERAXORIGINPOINT为在当前坐标系中第一个相机的安装位置，X坐标，FIRSTCAMERAYORIGINPOINT为Y坐标，要保证相机安装精度与当前坐标系平行
 //相机的安装坐标全部相对于限位来测的

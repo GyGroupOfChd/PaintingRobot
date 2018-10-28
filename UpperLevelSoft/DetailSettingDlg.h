@@ -1,5 +1,6 @@
 #pragma once
 #include "Parm.h"
+#include "afxwin.h"
 #define PRE_MULTIED_FACTOR_FOR_REAL_PARM 1000//传送过去的实际参数为避免浮点到整形的精度损失所做的预乘系数
 // DetailSettingDlg 对话框
 
@@ -79,4 +80,27 @@ public:
 	double m_dInverseOpenDelay4;
 	// 4枪逆向延迟关
 	double m_dInverseCloseDelay4;
+	CEdit m_fa_sd;
+	CEdit m_fa_sjk;
+	CEdit m_fa_gzqkd;
+	CEdit m_fa_gzqgd;
+	CEdit m_fa_pqs;
+	CEdit m_fa_pqjj;
+	CEdit m_fa_f_o_pqys;
+	CEdit m_fa_f_c_pqys;
+	CEdit m_fa_s_o_pqys;
+	CEdit m_fa_s_c_pqys;
+	CEdit m_fa_t_o_pqys;
+	CEdit m_fa_t_c_pqys;
+	CEdit m_fa_fo_o_pqys;
+	CEdit m_fa_fo_c_pqys;
+	CEdit m_inverse_first_opendelay;
+	CEdit m_inverse_first_closedelay;
+	CEdit m_inverse_second_opendelay;
+	CEdit m_inverse_second_closedelay;
+	CEdit m_inverse_third_opendelay;
+	CEdit m_inverse_third_closedelay;
+	CEdit m_inverse_forth_opendelay;
+	CEdit m_inverse_forth_closedelay;
+	afx_msg void OnBnClickedOk();
 };

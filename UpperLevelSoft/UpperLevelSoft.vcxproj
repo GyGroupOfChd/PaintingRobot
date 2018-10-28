@@ -114,6 +114,7 @@
     <ClInclude Include="CButtonST文件\CeXDib.h" />
     <ClInclude Include="CButtonST文件\ShadeButtonST.h" />
     <ClInclude Include="CButtonST文件\WinXPButtonST.h" />
+    <ClInclude Include="DataEnsureDlg.h" />
     <ClInclude Include="DetailSettingDlg.h" />
     <ClInclude Include="DownParmAdjust.h" />
     <ClInclude Include="DownParmValue.h" />
@@ -145,6 +146,7 @@
     <ClCompile Include="CButtonST文件\CeXDib.cpp" />
     <ClCompile Include="CButtonST文件\ShadeButtonST.cpp" />
     <ClCompile Include="CButtonST文件\WinXPButtonST.cpp" />
+    <ClCompile Include="DataEnsureDlg.cpp" />
     <ClCompile Include="DetailSettingDlg.cpp" />
     <ClCompile Include="DownParmAdjust.cpp" />
     <ClCompile Include="DownParmValue.cpp">

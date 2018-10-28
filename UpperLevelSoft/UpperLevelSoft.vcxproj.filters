@@ -135,6 +135,9 @@
     <ClInclude Include="DownParmValueHead.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="DataEnsureDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UpperLevelSoft.cpp">
@@ -207,6 +210,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="DownParmAdjust.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DataEnsureDlg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
